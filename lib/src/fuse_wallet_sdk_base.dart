@@ -4,7 +4,7 @@ import 'dart:convert';
 import 'package:data_channel/data_channel.dart';
 import 'package:dio/dio.dart';
 import 'package:hex/hex.dart';
-import 'package:http/http.dart' as http;
+// import 'package:http/http.dart' as http;
 import 'package:web3dart/crypto.dart';
 import 'package:web3dart/web3dart.dart';
 
@@ -12,6 +12,7 @@ import 'package:fuse_wallet_sdk/src/constants/variables.dart';
 import 'package:fuse_wallet_sdk/src/models/models.dart';
 import 'package:fuse_wallet_sdk/src/modules/modules.dart';
 import 'package:fuse_wallet_sdk/src/utils/utils.dart';
+import 'package:fuse_wallet_sdk/src/fallback_http_client.dart';
 
 class FuseWalletSDK {
   /// The public API key used to access the Fuse API.
@@ -27,7 +28,8 @@ class FuseWalletSDK {
   final Dio _dio;
 
   /// The Web3 client used for sending requests over an HTTP JSON-RPC API endpoint to Ethereum clients.
-  final Web3Client web3client;
+  late Web3Client web3client;
+  late FallbackHttpClient rpcHttpClient;
 
   WebSocketConnection? webSocketConnection;
 
@@ -40,7 +42,8 @@ class FuseWalletSDK {
     this.publicApiKey, {
     String baseUrl = Variables.BASE_URL,
     String rpcUrl = Variables.FUSE_RPC_URL,
-  })  : _dio = Dio(
+    String? fallbackRpcUrl = Variables.FUSE_FALLBACK_RPC_URL,
+  }) : _dio = Dio(
           BaseOptions(
             baseUrl: baseUrl,
             headers: {
@@ -50,8 +53,9 @@ class FuseWalletSDK {
               'apiKey': publicApiKey,
             },
           ),
-        ),
-        web3client = Web3Client(rpcUrl, http.Client()) {
+        ) {
+    rpcHttpClient = FallbackHttpClient(fallbackRpcUrl);
+    web3client = Web3Client(rpcUrl, rpcHttpClient);
     _initializeModules();
   }
 
@@ -261,6 +265,7 @@ class FuseWalletSDK {
     String value, {
     String transactionData = '0x',
     String? externalId,
+    String? accessToken,
   }) async {
     final tokenDetailsRes = await _explorerModule.getTokenDetails(tokenAddress);
 
@@ -288,7 +293,7 @@ class FuseWalletSDK {
       ],
       include0x: true,
     );
-    final String nonce = await _getNonce();
+    final String nonce = await _getNonce(accessToken: accessToken);
     final String signature = ContractsHelper.signOffChain(
       credentials,
       smartWallet.walletModules.transferManager,
@@ -333,6 +338,7 @@ class FuseWalletSDK {
     bool? isSafeTransfer = false,
     String transactionData = '0x',
     Map<String, dynamic>? transactionDetails = const {},
+    String? accessToken,
   }) async {
     final String methodName = 'transferNFT';
     final String walletModule = 'NftTransfer';
@@ -361,7 +367,7 @@ class FuseWalletSDK {
       ...?transactionDetails,
     });
 
-    final String nonce = await _getNonce();
+    final String nonce = await _getNonce(accessToken: accessToken);
     final String signature = ContractsHelper.signOffChain(
       credentials,
       walletModuleAddress,
@@ -390,6 +396,7 @@ class FuseWalletSDK {
     String disableModuleAddress,
     String enableModuleAddress, {
     Map<String, dynamic>? transactionBody,
+    String? accessToken,
   }) async {
     final String methodName = 'addModule';
     final String data = ContractsHelper.encodedDataForContractCall(
@@ -402,7 +409,7 @@ class FuseWalletSDK {
       ],
       include0x: true,
     );
-    final String nonce = await _getNonce();
+    final String nonce = await _getNonce(accessToken: accessToken);
     final String signature = ContractsHelper.signOffChain(
       credentials,
       disableModuleAddress,
@@ -431,6 +438,7 @@ class FuseWalletSDK {
     String spender,
     String value, {
     Map<String, dynamic>? transactionBody,
+    String? accessToken,
   }) async {
     final tokenDetailsRes = await _explorerModule.getTokenDetails(tokenAddress);
 
@@ -458,7 +466,7 @@ class FuseWalletSDK {
       include0x: true,
     );
 
-    final String nonce = await _getNonce();
+    final String nonce = await _getNonce(accessToken: accessToken);
     final String signature = ContractsHelper.signOffChain(
       credentials,
       smartWallet.walletModules.transferManager,
@@ -487,6 +495,7 @@ class FuseWalletSDK {
     String encodedData, {
     BigInt? value,
     Map<String, dynamic>? transactionBody,
+    String? accessToken,
   }) async {
     final String walletModule = 'TransferManager';
     final String methodName = 'callContract';
@@ -504,7 +513,7 @@ class FuseWalletSDK {
       include0x: true,
     );
 
-    final String nonce = await _getNonce();
+    final String nonce = await _getNonce(accessToken: accessToken);
     final String signature = ContractsHelper.signOffChain(
       credentials,
       smartWallet.walletModules.transferManager,
@@ -534,6 +543,7 @@ class FuseWalletSDK {
     String value,
     String encodedData, {
     Map<String, dynamic>? transactionBody,
+    String? accessToken,
   }) async {
     final tokenDetailsRes = await _explorerModule.getTokenDetails(
       tokenAddress,
@@ -564,7 +574,7 @@ class FuseWalletSDK {
       include0x: true,
     );
 
-    final String nonce = await _getNonce();
+    final String nonce = await _getNonce(accessToken: accessToken);
     final String signature = ContractsHelper.signOffChain(
       credentials,
       smartWallet.walletModules.transferManager,
@@ -589,8 +599,9 @@ class FuseWalletSDK {
 
   Future<DC<Exception, Stream<SmartWalletEvent>>> swapTokens(
     EthPrivateKey credentials,
-    TradeRequestBody tradeRequestBody,
-  ) async {
+    TradeRequestBody tradeRequestBody, {
+    String? accessToken,
+  }) async {
     final tradeRes = await _tradeModule.quote(
       tradeRequestBody,
     );
@@ -614,6 +625,7 @@ class FuseWalletSDK {
         data,
         value: BigInt.parse(swapCallParameters.data!.value),
         transactionBody: transactionBody,
+        accessToken: accessToken,
       );
     } else {
       final tokenDetailsRes = await _explorerModule.getTokenDetails(
@@ -634,14 +646,16 @@ class FuseWalletSDK {
         ),
         data,
         transactionBody: transactionBody,
+        accessToken: accessToken,
       );
     }
   }
 
   Future<DC<Exception, Stream<SmartWalletEvent>>> stakeToken(
     EthPrivateKey credentials,
-    StakeRequestBody stakeRequestBody,
-  ) async {
+    StakeRequestBody stakeRequestBody, {
+    String? accessToken,
+  }) async {
     final response = await _stakingModule.stake(stakeRequestBody);
 
     if (response.hasError) {
@@ -670,6 +684,7 @@ class FuseWalletSDK {
         response.data!.contractAddress,
         data,
         value: amount,
+        accessToken: accessToken,
       );
     } else {
       return approveTokenAndCallContract(
@@ -678,6 +693,7 @@ class FuseWalletSDK {
         response.data!.contractAddress,
         amount.toString(),
         data,
+        accessToken: accessToken,
       );
     }
   }
@@ -685,8 +701,9 @@ class FuseWalletSDK {
   Future<DC<Exception, Stream<SmartWalletEvent>>> unstakeToken(
     EthPrivateKey credentials,
     UnstakeRequestBody unstakeRequestBody,
-    String unStakeTokenAddress,
-  ) async {
+    String unStakeTokenAddress, {
+    String? accessToken,
+  }) async {
     final response = await _stakingModule.unstake(unstakeRequestBody);
     if (response.hasError) {
       return DC.error(response.error!);
@@ -718,6 +735,7 @@ class FuseWalletSDK {
         data,
         value: amount,
         transactionBody: transactionBody,
+        accessToken: accessToken,
       );
     } else {
       return approveTokenAndCallContract(
@@ -727,6 +745,7 @@ class FuseWalletSDK {
         amount.toString(),
         data,
         transactionBody: transactionBody,
+        accessToken: accessToken,
       );
     }
   }
@@ -742,6 +761,7 @@ class FuseWalletSDK {
     String value,
     List<dynamic> params, {
     Map<String, dynamic>? transactionBody,
+    String? accessToken,
   }) async {
     final String data = ContractsHelper.encodedDataForContractCall(
       contractName,
@@ -758,6 +778,7 @@ class FuseWalletSDK {
       value,
       data,
       transactionBody: transactionBody,
+      accessToken: accessToken,
     );
   }
 
@@ -770,6 +791,7 @@ class FuseWalletSDK {
     BigInt value,
     List<dynamic> params, {
     Map<String, dynamic>? transactionBody,
+    String? accessToken,
   }) async {
     final String data = ContractsHelper.encodedDataForContractCall(
       contractName,
@@ -786,13 +808,16 @@ class FuseWalletSDK {
       data,
       value: value,
       transactionBody: transactionBody,
+      accessToken: accessToken,
     );
   }
 
   Future<DC<Exception, BigInt>> _getNativeBalance(
-    String address,
-  ) async {
+    String address, {
+    String? accessToken,
+  }) async {
     try {
+      rpcHttpClient.withAccessToken(accessToken);
       final etherAmount = await web3client.getBalance(
         EthereumAddress.fromHex(address),
       );
@@ -804,13 +829,15 @@ class FuseWalletSDK {
 
   Future<DC<Exception, BigInt>> getBalance(
     String tokenAddress,
-    String address,
-  ) async {
+    String address, {
+    String? accessToken,
+  }) async {
     if (tokenAddress.toLowerCase() ==
         Variables.NATIVE_TOKEN_ADDRESS.toLowerCase()) {
-      return _getNativeBalance(address);
+      return _getNativeBalance(address, accessToken: accessToken);
     }
     try {
+      rpcHttpClient.withAccessToken(accessToken);
       final List<dynamic> response = await ContractsHelper.readFromContract(
         web3client,
         'BasicToken',
@@ -824,7 +851,8 @@ class FuseWalletSDK {
     }
   }
 
-  Future<String> _getNonce() async {
+  Future<String> _getNonce({String? accessToken}) async {
+    rpcHttpClient.withAccessToken(accessToken);
     final BigInt block = BigInt.from(await web3client.getBlockNumber());
     final BigInt timestamp = BigInt.from(DateTime.now().millisecondsSinceEpoch);
     final String blockHex = hexZeroPad(hexlify(block), 16);

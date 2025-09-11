@@ -3,6 +3,7 @@ class Variables {
 
   static const FUSE_CHAIN_ID = 122;
   static const FUSE_RPC_URL = 'https://rpc.fuse.io';
+  static const FUSE_FALLBACK_RPC_URL = null;
   static const int DEFAULT_GAS_LIMIT = 700000;
   static const String NATIVE_TOKEN_ADDRESS =
       '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE'; // For sending native (ETH/FUSE) using TransferManager
