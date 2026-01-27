@@ -6,13 +6,13 @@ part of 'smart_wallet_event.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SmartWalletEvent _$$_SmartWalletEventFromJson(Map<String, dynamic> json) =>
-    _$_SmartWalletEvent(
+_SmartWalletEvent _$SmartWalletEventFromJson(Map<String, dynamic> json) =>
+    _SmartWalletEvent(
       name: json['eventName'] as String,
       data: json['eventData'] as Map<String, dynamic>,
     );
 
-Map<String, dynamic> _$$_SmartWalletEventToJson(_$_SmartWalletEvent instance) =>
+Map<String, dynamic> _$SmartWalletEventToJson(_SmartWalletEvent instance) =>
     <String, dynamic>{
       'eventName': instance.name,
       'eventData': instance.data,

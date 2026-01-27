@@ -4,8 +4,8 @@ import 'dart:convert';
 import 'package:data_channel/data_channel.dart';
 import 'package:dio/dio.dart';
 import 'package:hex/hex.dart';
+import 'package:wallet/wallet.dart';
 // import 'package:http/http.dart' as http;
-import 'package:web3dart/crypto.dart';
 import 'package:web3dart/web3dart.dart';
 
 import 'package:fuse_wallet_sdk/src/constants/variables.dart';

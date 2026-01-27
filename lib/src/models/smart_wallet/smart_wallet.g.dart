@@ -6,8 +6,7 @@ part of 'smart_wallet.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SmartWallet _$$_SmartWalletFromJson(Map<String, dynamic> json) =>
-    _$_SmartWallet(
+_SmartWallet _$SmartWalletFromJson(Map<String, dynamic> json) => _SmartWallet(
       ownerAddress: json['ownerAddress'] as String,
       smartWalletAddress: json['smartWalletAddress'] as String,
       walletModules:
@@ -20,7 +19,7 @@ _$_SmartWallet _$$_SmartWalletFromJson(Map<String, dynamic> json) =>
           const ['fuse'],
     );
 
-Map<String, dynamic> _$$_SmartWalletToJson(_$_SmartWallet instance) =>
+Map<String, dynamic> _$SmartWalletToJson(_SmartWallet instance) =>
     <String, dynamic>{
       'ownerAddress': instance.ownerAddress,
       'smartWalletAddress': instance.smartWalletAddress,

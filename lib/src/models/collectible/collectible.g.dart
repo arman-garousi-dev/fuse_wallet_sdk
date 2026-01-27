@@ -6,8 +6,7 @@ part of 'collectible.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Collectible _$$_CollectibleFromJson(Map<String, dynamic> json) =>
-    _$_Collectible(
+_Collectible _$CollectibleFromJson(Map<String, dynamic> json) => _Collectible(
       description: json['description'] as String?,
       name: json['name'] as String?,
       imageURL: json['imageURL'] as String?,
@@ -20,7 +19,7 @@ _$_Collectible _$$_CollectibleFromJson(Map<String, dynamic> json) =>
       creator: Address.fromJson(json['creator'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CollectibleToJson(_$_Collectible instance) =>
+Map<String, dynamic> _$CollectibleToJson(_Collectible instance) =>
     <String, dynamic>{
       'description': instance.description,
       'name': instance.name,

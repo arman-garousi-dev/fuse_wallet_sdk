@@ -6,15 +6,15 @@ part of 'trade_request_body.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TradeRequestBody _$$_TradeRequestBodyFromJson(Map<String, dynamic> json) =>
-    _$_TradeRequestBody(
+_TradeRequestBody _$TradeRequestBodyFromJson(Map<String, dynamic> json) =>
+    _TradeRequestBody(
       currencyIn: json['currencyIn'] as String? ?? '',
       currencyOut: json['currencyOut'] as String? ?? '',
       amountIn: json['amountIn'] as String? ?? '',
       recipient: json['recipient'] as String? ?? '',
     );
 
-Map<String, dynamic> _$$_TradeRequestBodyToJson(_$_TradeRequestBody instance) =>
+Map<String, dynamic> _$TradeRequestBodyToJson(_TradeRequestBody instance) =>
     <String, dynamic>{
       'currencyIn': instance.currencyIn,
       'currencyOut': instance.currencyOut,

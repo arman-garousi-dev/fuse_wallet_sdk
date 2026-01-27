@@ -6,7 +6,7 @@ part of 'trade.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Trade _$$_TradeFromJson(Map<String, dynamic> json) => _$_Trade(
+_Trade _$TradeFromJson(Map<String, dynamic> json) => _Trade(
       inputAmount: json['inputAmount'] as String,
       outputAmount: json['outputAmount'] as String,
       route: (json['route'] as List<dynamic>).map((e) => e as String).toList(),
@@ -17,7 +17,7 @@ _$_Trade _$$_TradeFromJson(Map<String, dynamic> json) => _$_Trade(
       priceImpact: json['priceImpact'] as String,
     );
 
-Map<String, dynamic> _$$_TradeToJson(_$_Trade instance) => <String, dynamic>{
+Map<String, dynamic> _$TradeToJson(_Trade instance) => <String, dynamic>{
       'inputAmount': instance.inputAmount,
       'outputAmount': instance.outputAmount,
       'route': instance.route,

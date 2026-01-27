@@ -1,10 +1,9 @@
 import 'dart:typed_data';
 
 import 'package:hex/hex.dart';
-import 'package:web3dart/credentials.dart';
-import 'package:web3dart/crypto.dart';
 
 import 'package:fuse_wallet_sdk/src/models/auth/auth.dto.dart';
+import 'package:web3dart/web3dart.dart';
 
 /// Class for handling authentication processes for Fuse Smart Wallets.
 class SmartWalletAuth {
@@ -14,7 +13,7 @@ class SmartWalletAuth {
   ///
   /// It returns a [AuthDto], containing the [hash], [ownerAddress] and [signature] of the authenticated wallet.
   static AuthDto signer(EthPrivateKey credentials) {
-    final String ownerAddress = credentials.address.hexEip55;
+    final String ownerAddress = credentials.address.eip55With0x;
     final Uint8List input = Uint8List.fromList(HEX.decode(
       ownerAddress.replaceFirst('0x', ''),
     ));

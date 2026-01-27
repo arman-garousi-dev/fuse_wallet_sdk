@@ -6,8 +6,7 @@ part of 'staked_token.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_StakedToken _$$_StakedTokenFromJson(Map<String, dynamic> json) =>
-    _$_StakedToken(
+_StakedToken _$StakedTokenFromJson(Map<String, dynamic> json) => _StakedToken(
       tokenAddress: json['tokenAddress'] as String,
       tokenSymbol: json['tokenSymbol'] as String,
       tokenName: json['tokenName'] as String,
@@ -19,7 +18,7 @@ _$_StakedToken _$$_StakedTokenFromJson(Map<String, dynamic> json) =>
       stakingApr: (json['stakingApr'] as num).toDouble(),
     );
 
-Map<String, dynamic> _$$_StakedTokenToJson(_$_StakedToken instance) =>
+Map<String, dynamic> _$StakedTokenToJson(_StakedToken instance) =>
     <String, dynamic>{
       'tokenAddress': instance.tokenAddress,
       'tokenSymbol': instance.tokenSymbol,
@@ -32,9 +31,8 @@ Map<String, dynamic> _$$_StakedTokenToJson(_$_StakedToken instance) =>
       'stakingApr': instance.stakingApr,
     };
 
-_$_StakedTokenResponse _$$_StakedTokenResponseFromJson(
-        Map<String, dynamic> json) =>
-    _$_StakedTokenResponse(
+_StakedTokenResponse _$StakedTokenResponseFromJson(Map<String, dynamic> json) =>
+    _StakedTokenResponse(
       totalStakedAmountUSD: (json['totalStakedAmountUSD'] as num).toDouble(),
       totalEarnedAmountUSD: (json['totalEarnedAmountUSD'] as num).toDouble(),
       stakedTokens: (json['stakedTokens'] as List<dynamic>)
@@ -42,8 +40,8 @@ _$_StakedTokenResponse _$$_StakedTokenResponseFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_StakedTokenResponseToJson(
-        _$_StakedTokenResponse instance) =>
+Map<String, dynamic> _$StakedTokenResponseToJson(
+        _StakedTokenResponse instance) =>
     <String, dynamic>{
       'totalStakedAmountUSD': instance.totalStakedAmountUSD,
       'totalEarnedAmountUSD': instance.totalEarnedAmountUSD,

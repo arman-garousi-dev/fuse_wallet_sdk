@@ -6,8 +6,8 @@ part of 'action_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ActionResult _$$_ActionResultFromJson(Map<String, dynamic> json) =>
-    _$_ActionResult(
+_ActionResult _$ActionResultFromJson(Map<String, dynamic> json) =>
+    _ActionResult(
       hasNextPage: json['hasNextPage'] as bool,
       hasPrevPage: json['hasPrevPage'] as bool,
       nextPage: json['nextPage'] as num?,
@@ -17,7 +17,7 @@ _$_ActionResult _$$_ActionResultFromJson(Map<String, dynamic> json) =>
       actions: const ActionsConverter().fromJson(json['docs'] as List),
     );
 
-Map<String, dynamic> _$$_ActionResultToJson(_$_ActionResult instance) =>
+Map<String, dynamic> _$ActionResultToJson(_ActionResult instance) =>
     <String, dynamic>{
       'hasNextPage': instance.hasNextPage,
       'hasPrevPage': instance.hasPrevPage,
