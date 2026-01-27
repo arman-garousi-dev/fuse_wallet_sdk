@@ -1,6 +1,6 @@
 import 'dart:typed_data';
-import 'package:bip32/bip32.dart' as bip32;
-import 'package:bip39/bip39.dart' as bip39;
+import 'package:bip32_plus/bip32_plus.dart' as bip32;
+import 'package:bip39_mnemonic/bip39_mnemonic.dart' as bip39;
 import 'package:hex/hex.dart';
 import 'package:compute/compute.dart';
 
@@ -9,13 +9,45 @@ class Mnemonic {
   /// Generates a new BIP-39 mnemonic with a given strength (default 128 bits).
   ///
   /// Returns a string representing the new mnemonic.
-  static String generate({int strength = 128}) =>
-      bip39.generateMnemonic(strength: strength);
+  static String generate({int strength = 128}) {
+    // Convert strength in bits to MnemonicLength enum
+    final bip39.MnemonicLength length;
+    switch (strength) {
+      case 128:
+        length = bip39.MnemonicLength.words12;
+        break;
+      case 160:
+        length = bip39.MnemonicLength.words15;
+        break;
+      case 192:
+        length = bip39.MnemonicLength.words18;
+        break;
+      case 224:
+        length = bip39.MnemonicLength.words21;
+        break;
+      case 256:
+        length = bip39.MnemonicLength.words24;
+        break;
+      default:
+        length = bip39.MnemonicLength.words12;
+    }
+
+    final mnemonic =
+        bip39.Mnemonic.generate(bip39.Language.english, length: length);
+    return mnemonic.sentence;
+  }
 
   /// Validates a BIP-39 mnemonic.
   ///
   /// Returns true if the mnemonic is valid, and false otherwise.
-  static bool isValid(String mnemonic) => bip39.validateMnemonic(mnemonic);
+  static bool isValid(String mnemonic) {
+    try {
+      bip39.Mnemonic.fromSentence(mnemonic, bip39.Language.english);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
 
   /// Derives a private key from a BIP-39 mnemonic using a given derivation path and passphrase.
   ///
@@ -31,13 +63,13 @@ class Mnemonic {
     int childIndex = 0,
     String passphrase = "",
   }) {
-    final String seed = bip39.mnemonicToSeedHex(
+    final mnemonicObj = bip39.Mnemonic.fromSentence(
       mnemonic,
+      bip39.Language.english,
       passphrase: passphrase,
     );
-    final bip32.BIP32 rootNode = bip32.BIP32.fromSeed(
-      HEX.decode(seed) as Uint8List,
-    );
+    final Uint8List seed = Uint8List.fromList(mnemonicObj.seed);
+    final bip32.BIP32 rootNode = bip32.BIP32.fromSeed(seed);
     final bip32.BIP32 childNode = rootNode.derivePath(
       "$derivationPath$childIndex",
     );

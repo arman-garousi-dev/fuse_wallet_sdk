@@ -6,8 +6,8 @@ part of 'option.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_StakingOption _$$_StakingOptionFromJson(Map<String, dynamic> json) =>
-    _$_StakingOption(
+_StakingOption _$StakingOptionFromJson(Map<String, dynamic> json) =>
+    _StakingOption(
       tokenAddress: json['tokenAddress'] as String,
       tokenSymbol: json['tokenSymbol'] as String,
       tokenName: json['tokenName'] as String,
@@ -17,7 +17,7 @@ _$_StakingOption _$$_StakingOptionFromJson(Map<String, dynamic> json) =>
       tvl: (json['tvl'] as num).toDouble(),
     );
 
-Map<String, dynamic> _$$_StakingOptionToJson(_$_StakingOption instance) =>
+Map<String, dynamic> _$StakingOptionToJson(_StakingOption instance) =>
     <String, dynamic>{
       'tokenAddress': instance.tokenAddress,
       'tokenSymbol': instance.tokenSymbol,

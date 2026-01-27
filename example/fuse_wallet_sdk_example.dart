@@ -11,7 +11,7 @@ void main() async {
   // Create a project: https://developers.fuse.io
   final String publicApiKey = '';
   print('privateKey: $privateKey');
-  print('address: ${credentials.address.hexEip55}');
+  print('address: ${credentials.address.eip55With0x}');
   final FuseWalletSDK fuseWalletSDK = FuseWalletSDK(publicApiKey);
   final DC<Exception, String> authRes = await fuseWalletSDK.authenticate(
     credentials,

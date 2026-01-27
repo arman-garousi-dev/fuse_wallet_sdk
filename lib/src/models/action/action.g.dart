@@ -6,17 +6,16 @@ part of 'action.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CreateWallet _$$CreateWalletFromJson(Map<String, dynamic> json) =>
-    _$CreateWallet(
-      timestamp: json['timestamp'] as int? ?? 0,
+CreateWallet _$CreateWalletFromJson(Map<String, dynamic> json) => CreateWallet(
+      timestamp: (json['timestamp'] as num?)?.toInt() ?? 0,
       id: json['_id'] as String,
       name: json['name'] as String? ?? 'createWallet',
       txHash: json['txHash'] as String?,
       status: json['status'] as String,
-      blockNumber: json['blockNumber'] as int? ?? 0,
+      blockNumber: (json['blockNumber'] as num?)?.toInt() ?? 0,
     );
 
-Map<String, dynamic> _$$CreateWalletToJson(_$CreateWallet instance) =>
+Map<String, dynamic> _$CreateWalletToJson(CreateWallet instance) =>
     <String, dynamic>{
       'timestamp': instance.timestamp,
       '_id': instance.id,
@@ -26,24 +25,23 @@ Map<String, dynamic> _$$CreateWalletToJson(_$CreateWallet instance) =>
       'blockNumber': instance.blockNumber,
     };
 
-_$FiatDeposit _$$FiatDepositFromJson(Map<String, dynamic> json) =>
-    _$FiatDeposit(
-      timestamp: json['timestamp'] as int? ?? 0,
+FiatDeposit _$FiatDepositFromJson(Map<String, dynamic> json) => FiatDeposit(
+      timestamp: (json['timestamp'] as num?)?.toInt() ?? 0,
       id: json['_id'] as String,
       name: json['name'] as String? ?? 'fiat-deposit',
       txHash: json['txHash'] as String?,
       status: json['status'] as String,
-      blockNumber: json['blockNumber'] as int? ?? 0,
+      blockNumber: (json['blockNumber'] as num?)?.toInt() ?? 0,
       tokenAddress: json['tokenAddress'] as String,
       from: json['from'] as String?,
       to: json['to'] as String,
       value: BigInt.parse(json['value'] as String),
       tokenName: json['tokenName'] as String,
       tokenSymbol: json['tokenSymbol'] as String,
-      tokenDecimal: json['tokenDecimal'] as int,
+      tokenDecimal: (json['tokenDecimal'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$FiatDepositToJson(_$FiatDeposit instance) =>
+Map<String, dynamic> _$FiatDepositToJson(FiatDeposit instance) =>
     <String, dynamic>{
       'timestamp': instance.timestamp,
       '_id': instance.id,
@@ -60,23 +58,23 @@ Map<String, dynamic> _$$FiatDepositToJson(_$FiatDeposit instance) =>
       'tokenDecimal': instance.tokenDecimal,
     };
 
-_$Send _$$SendFromJson(Map<String, dynamic> json) => _$Send(
-      timestamp: json['timestamp'] as int? ?? 0,
+Send _$SendFromJson(Map<String, dynamic> json) => Send(
+      timestamp: (json['timestamp'] as num?)?.toInt() ?? 0,
       id: json['_id'] as String,
       name: json['name'] as String? ?? 'sendTokens',
       txHash: json['txHash'] as String?,
       status: json['status'] as String,
-      blockNumber: json['blockNumber'] as int? ?? 0,
+      blockNumber: (json['blockNumber'] as num?)?.toInt() ?? 0,
       tokenAddress: json['tokenAddress'] as String,
       from: json['from'] as String,
       to: json['to'] as String,
       value: BigInt.parse(json['value'] as String),
       tokenName: json['tokenName'] as String,
       tokenSymbol: json['tokenSymbol'] as String,
-      tokenDecimal: json['tokenDecimal'] as int,
+      tokenDecimal: (json['tokenDecimal'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$SendToJson(_$Send instance) => <String, dynamic>{
+Map<String, dynamic> _$SendToJson(Send instance) => <String, dynamic>{
       'timestamp': instance.timestamp,
       '_id': instance.id,
       'name': instance.name,
@@ -92,23 +90,23 @@ Map<String, dynamic> _$$SendToJson(_$Send instance) => <String, dynamic>{
       'tokenDecimal': instance.tokenDecimal,
     };
 
-_$Receive _$$ReceiveFromJson(Map<String, dynamic> json) => _$Receive(
-      timestamp: json['timestamp'] as int? ?? 0,
+Receive _$ReceiveFromJson(Map<String, dynamic> json) => Receive(
+      timestamp: (json['timestamp'] as num?)?.toInt() ?? 0,
       id: json['_id'] as String,
       name: json['name'] as String? ?? 'receiveTokens',
       txHash: json['txHash'] as String?,
       status: json['status'] as String,
-      blockNumber: json['blockNumber'] as int? ?? 0,
+      blockNumber: (json['blockNumber'] as num?)?.toInt() ?? 0,
       tokenAddress: json['tokenAddress'] as String,
       from: json['from'] as String,
       to: json['to'] as String,
       value: BigInt.parse(json['value'] as String),
       tokenName: json['tokenName'] as String,
       tokenSymbol: json['tokenSymbol'] as String,
-      tokenDecimal: json['tokenDecimal'] as int,
+      tokenDecimal: (json['tokenDecimal'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$ReceiveToJson(_$Receive instance) => <String, dynamic>{
+Map<String, dynamic> _$ReceiveToJson(Receive instance) => <String, dynamic>{
       'timestamp': instance.timestamp,
       '_id': instance.id,
       'name': instance.name,
@@ -124,19 +122,19 @@ Map<String, dynamic> _$$ReceiveToJson(_$Receive instance) => <String, dynamic>{
       'tokenDecimal': instance.tokenDecimal,
     };
 
-_$Swap _$$SwapFromJson(Map<String, dynamic> json) => _$Swap(
-      timestamp: json['timestamp'] as int? ?? 0,
+Swap _$SwapFromJson(Map<String, dynamic> json) => Swap(
+      timestamp: (json['timestamp'] as num?)?.toInt() ?? 0,
       id: json['_id'] as String,
       name: json['name'] as String? ?? 'swapTokens',
       txHash: json['txHash'] as String?,
       status: json['status'] as String,
-      blockNumber: json['blockNumber'] as int? ?? 0,
+      blockNumber: (json['blockNumber'] as num?)?.toInt() ?? 0,
       tradeInfo: json['metadata'] == null
           ? null
           : Trade.fromJson(json['metadata'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$SwapToJson(_$Swap instance) => <String, dynamic>{
+Map<String, dynamic> _$SwapToJson(Swap instance) => <String, dynamic>{
       'timestamp': instance.timestamp,
       '_id': instance.id,
       'name': instance.name,
@@ -146,22 +144,22 @@ Map<String, dynamic> _$$SwapToJson(_$Swap instance) => <String, dynamic>{
       'metadata': instance.tradeInfo?.toJson(),
     };
 
-_$ReceiveNFT _$$ReceiveNFTFromJson(Map<String, dynamic> json) => _$ReceiveNFT(
-      timestamp: json['timestamp'] as int? ?? 0,
+ReceiveNFT _$ReceiveNFTFromJson(Map<String, dynamic> json) => ReceiveNFT(
+      timestamp: (json['timestamp'] as num?)?.toInt() ?? 0,
       id: json['_id'] as String,
       name: json['name'] as String? ?? 'receiveNFT',
       txHash: json['txHash'] as String?,
       status: json['status'] as String,
-      blockNumber: json['blockNumber'] as int? ?? 0,
+      blockNumber: (json['blockNumber'] as num?)?.toInt() ?? 0,
       tokenAddress: json['tokenAddress'] as String,
       from: json['from'] as String,
       to: json['to'] as String,
       tokenName: json['tokenName'] as String,
       tokenSymbol: json['tokenSymbol'] as String,
-      tokenDecimal: json['tokenDecimal'] as int,
+      tokenDecimal: (json['tokenDecimal'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$ReceiveNFTToJson(_$ReceiveNFT instance) =>
+Map<String, dynamic> _$ReceiveNFTToJson(ReceiveNFT instance) =>
     <String, dynamic>{
       'timestamp': instance.timestamp,
       '_id': instance.id,
@@ -177,24 +175,23 @@ Map<String, dynamic> _$$ReceiveNFTToJson(_$ReceiveNFT instance) =>
       'tokenDecimal': instance.tokenDecimal,
     };
 
-_$StakeTokens _$$StakeTokensFromJson(Map<String, dynamic> json) =>
-    _$StakeTokens(
-      timestamp: json['timestamp'] as int? ?? 0,
+StakeTokens _$StakeTokensFromJson(Map<String, dynamic> json) => StakeTokens(
+      timestamp: (json['timestamp'] as num?)?.toInt() ?? 0,
       id: json['_id'] as String,
       name: json['name'] as String? ?? 'stakeTokens',
       txHash: json['txHash'] as String?,
       status: json['status'] as String,
-      blockNumber: json['blockNumber'] as int? ?? 0,
+      blockNumber: (json['blockNumber'] as num?)?.toInt() ?? 0,
       tokenAddress: json['tokenAddress'] as String,
       from: json['from'] as String,
       to: json['to'] as String,
       value: BigInt.parse(json['value'] as String),
       tokenName: json['tokenName'] as String,
       tokenSymbol: json['tokenSymbol'] as String,
-      tokenDecimal: json['tokenDecimal'] as int,
+      tokenDecimal: (json['tokenDecimal'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$StakeTokensToJson(_$StakeTokens instance) =>
+Map<String, dynamic> _$StakeTokensToJson(StakeTokens instance) =>
     <String, dynamic>{
       'timestamp': instance.timestamp,
       '_id': instance.id,
@@ -211,24 +208,24 @@ Map<String, dynamic> _$$StakeTokensToJson(_$StakeTokens instance) =>
       'tokenDecimal': instance.tokenDecimal,
     };
 
-_$UnstakeTokens _$$UnstakeTokensFromJson(Map<String, dynamic> json) =>
-    _$UnstakeTokens(
-      timestamp: json['timestamp'] as int? ?? 0,
+UnstakeTokens _$UnstakeTokensFromJson(Map<String, dynamic> json) =>
+    UnstakeTokens(
+      timestamp: (json['timestamp'] as num?)?.toInt() ?? 0,
       id: json['_id'] as String,
       name: json['name'] as String? ?? 'unstakeTokens',
       txHash: json['txHash'] as String?,
       status: json['status'] as String,
-      blockNumber: json['blockNumber'] as int? ?? 0,
+      blockNumber: (json['blockNumber'] as num?)?.toInt() ?? 0,
       tokenAddress: json['tokenAddress'] as String,
       from: json['from'] as String,
       to: json['to'] as String,
       value: BigInt.parse(json['value'] as String),
       tokenName: json['tokenName'] as String,
       tokenSymbol: json['tokenSymbol'] as String,
-      tokenDecimal: json['tokenDecimal'] as int,
+      tokenDecimal: (json['tokenDecimal'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$UnstakeTokensToJson(_$UnstakeTokens instance) =>
+Map<String, dynamic> _$UnstakeTokensToJson(UnstakeTokens instance) =>
     <String, dynamic>{
       'timestamp': instance.timestamp,
       '_id': instance.id,

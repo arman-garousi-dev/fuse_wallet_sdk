@@ -6,8 +6,8 @@ part of 'wallet_modules.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_WalletModules _$$_WalletModulesFromJson(Map<String, dynamic> json) =>
-    _$_WalletModules(
+_WalletModules _$WalletModulesFromJson(Map<String, dynamic> json) =>
+    _WalletModules(
       guardianManager: json['GuardianManager'] as String,
       lockManager: json['LockManager'] as String,
       recoveryManager: json['RecoveryManager'] as String,
@@ -20,7 +20,7 @@ _$_WalletModules _$$_WalletModulesFromJson(Map<String, dynamic> json) =>
       nftTransfer: json['NftTransfer'] as String?,
     );
 
-Map<String, dynamic> _$$_WalletModulesToJson(_$_WalletModules instance) =>
+Map<String, dynamic> _$WalletModulesToJson(_WalletModules instance) =>
     <String, dynamic>{
       'GuardianManager': instance.guardianManager,
       'LockManager': instance.lockManager,

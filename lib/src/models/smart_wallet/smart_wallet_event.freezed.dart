@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,75 +9,52 @@ part of 'smart_wallet_event.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-SmartWalletEvent _$SmartWalletEventFromJson(Map<String, dynamic> json) {
-  return _SmartWalletEvent.fromJson(json);
-}
 
 /// @nodoc
 mixin _$SmartWalletEvent {
   @JsonKey(name: 'eventName')
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @JsonKey(name: 'eventData')
-  Map<String, dynamic> get data => throw _privateConstructorUsedError;
+  Map<String, dynamic> get data;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $SmartWalletEventCopyWith<SmartWalletEvent> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $SmartWalletEventCopyWith<$Res> {
-  factory $SmartWalletEventCopyWith(
-          SmartWalletEvent value, $Res Function(SmartWalletEvent) then) =
-      _$SmartWalletEventCopyWithImpl<$Res, SmartWalletEvent>;
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'eventName') String name,
-      @JsonKey(name: 'eventData') Map<String, dynamic> data});
-}
-
-/// @nodoc
-class _$SmartWalletEventCopyWithImpl<$Res, $Val extends SmartWalletEvent>
-    implements $SmartWalletEventCopyWith<$Res> {
-  _$SmartWalletEventCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of SmartWalletEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $SmartWalletEventCopyWith<SmartWalletEvent> get copyWith =>
+      _$SmartWalletEventCopyWithImpl<SmartWalletEvent>(
+          this as SmartWalletEvent, _$identity);
+
+  /// Serializes this SmartWalletEvent to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? name = null,
-    Object? data = null,
-  }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is SmartWalletEvent &&
+            (identical(other.name, name) || other.name == name) &&
+            const DeepCollectionEquality().equals(other.data, data));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, name, const DeepCollectionEquality().hash(data));
+
+  @override
+  String toString() {
+    return 'SmartWalletEvent(name: $name, data: $data)';
   }
 }
 
 /// @nodoc
-abstract class _$$_SmartWalletEventCopyWith<$Res>
-    implements $SmartWalletEventCopyWith<$Res> {
-  factory _$$_SmartWalletEventCopyWith(
-          _$_SmartWalletEvent value, $Res Function(_$_SmartWalletEvent) then) =
-      __$$_SmartWalletEventCopyWithImpl<$Res>;
-  @override
+abstract mixin class $SmartWalletEventCopyWith<$Res> {
+  factory $SmartWalletEventCopyWith(
+          SmartWalletEvent value, $Res Function(SmartWalletEvent) _then) =
+      _$SmartWalletEventCopyWithImpl;
   @useResult
   $Res call(
       {@JsonKey(name: 'eventName') String name,
@@ -85,41 +62,205 @@ abstract class _$$_SmartWalletEventCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SmartWalletEventCopyWithImpl<$Res>
-    extends _$SmartWalletEventCopyWithImpl<$Res, _$_SmartWalletEvent>
-    implements _$$_SmartWalletEventCopyWith<$Res> {
-  __$$_SmartWalletEventCopyWithImpl(
-      _$_SmartWalletEvent _value, $Res Function(_$_SmartWalletEvent) _then)
-      : super(_value, _then);
+class _$SmartWalletEventCopyWithImpl<$Res>
+    implements $SmartWalletEventCopyWith<$Res> {
+  _$SmartWalletEventCopyWithImpl(this._self, this._then);
 
+  final SmartWalletEvent _self;
+  final $Res Function(SmartWalletEvent) _then;
+
+  /// Create a copy of SmartWalletEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? name = null,
     Object? data = null,
   }) {
-    return _then(_$_SmartWalletEvent(
+    return _then(_self.copyWith(
       name: null == name
-          ? _value.name
+          ? _self.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
       data: null == data
-          ? _value.data
+          ? _self.data
           : data // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [SmartWalletEvent].
+extension SmartWalletEventPatterns on SmartWalletEvent {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_SmartWalletEvent value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _SmartWalletEvent() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_SmartWalletEvent value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SmartWalletEvent():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_SmartWalletEvent value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SmartWalletEvent() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(@JsonKey(name: 'eventName') String name,
+            @JsonKey(name: 'eventData') Map<String, dynamic> data)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _SmartWalletEvent() when $default != null:
+        return $default(_that.name, _that.data);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(@JsonKey(name: 'eventName') String name,
+            @JsonKey(name: 'eventData') Map<String, dynamic> data)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SmartWalletEvent():
+        return $default(_that.name, _that.data);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(@JsonKey(name: 'eventName') String name,
+            @JsonKey(name: 'eventData') Map<String, dynamic> data)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SmartWalletEvent() when $default != null:
+        return $default(_that.name, _that.data);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
-class _$_SmartWalletEvent implements _SmartWalletEvent {
-  _$_SmartWalletEvent(
+class _SmartWalletEvent implements SmartWalletEvent {
+  _SmartWalletEvent(
       {@JsonKey(name: 'eventName') required this.name,
       @JsonKey(name: 'eventData') required this.data});
-
-  factory _$_SmartWalletEvent.fromJson(Map<String, dynamic> json) =>
-      _$$_SmartWalletEventFromJson(json);
+  factory _SmartWalletEvent.fromJson(Map<String, dynamic> json) =>
+      _$SmartWalletEventFromJson(json);
 
   @override
   @JsonKey(name: 'eventName')
@@ -128,56 +269,81 @@ class _$_SmartWalletEvent implements _SmartWalletEvent {
   @JsonKey(name: 'eventData')
   final Map<String, dynamic> data;
 
+  /// Create a copy of SmartWalletEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'SmartWalletEvent(name: $name, data: $data)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$SmartWalletEventCopyWith<_SmartWalletEvent> get copyWith =>
+      __$SmartWalletEventCopyWithImpl<_SmartWalletEvent>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$SmartWalletEventToJson(
+      this,
+    );
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SmartWalletEvent &&
+            other is _SmartWalletEvent &&
             (identical(other.name, name) || other.name == name) &&
             const DeepCollectionEquality().equals(other.data, data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, name, const DeepCollectionEquality().hash(data));
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$_SmartWalletEventCopyWith<_$_SmartWalletEvent> get copyWith =>
-      __$$_SmartWalletEventCopyWithImpl<_$_SmartWalletEvent>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SmartWalletEventToJson(
-      this,
-    );
+  String toString() {
+    return 'SmartWalletEvent(name: $name, data: $data)';
   }
 }
 
-abstract class _SmartWalletEvent implements SmartWalletEvent {
-  factory _SmartWalletEvent(
-      {@JsonKey(name: 'eventName') required final String name,
-      @JsonKey(name: 'eventData')
-      required final Map<String, dynamic> data}) = _$_SmartWalletEvent;
-
-  factory _SmartWalletEvent.fromJson(Map<String, dynamic> json) =
-      _$_SmartWalletEvent.fromJson;
-
+/// @nodoc
+abstract mixin class _$SmartWalletEventCopyWith<$Res>
+    implements $SmartWalletEventCopyWith<$Res> {
+  factory _$SmartWalletEventCopyWith(
+          _SmartWalletEvent value, $Res Function(_SmartWalletEvent) _then) =
+      __$SmartWalletEventCopyWithImpl;
   @override
-  @JsonKey(name: 'eventName')
-  String get name;
-  @override
-  @JsonKey(name: 'eventData')
-  Map<String, dynamic> get data;
-  @override
-  @JsonKey(ignore: true)
-  _$$_SmartWalletEventCopyWith<_$_SmartWalletEvent> get copyWith =>
-      throw _privateConstructorUsedError;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'eventName') String name,
+      @JsonKey(name: 'eventData') Map<String, dynamic> data});
 }
+
+/// @nodoc
+class __$SmartWalletEventCopyWithImpl<$Res>
+    implements _$SmartWalletEventCopyWith<$Res> {
+  __$SmartWalletEventCopyWithImpl(this._self, this._then);
+
+  final _SmartWalletEvent _self;
+  final $Res Function(_SmartWalletEvent) _then;
+
+  /// Create a copy of SmartWalletEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? name = null,
+    Object? data = null,
+  }) {
+    return _then(_SmartWalletEvent(
+      name: null == name
+          ? _self.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      data: null == data
+          ? _self.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+    ));
+  }
+}
+
+// dart format on

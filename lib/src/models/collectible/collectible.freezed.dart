@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,39 +9,69 @@ part of 'collectible.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-Collectible _$CollectibleFromJson(Map<String, dynamic> json) {
-  return _Collectible.fromJson(json);
-}
 
 /// @nodoc
 mixin _$Collectible {
-  String? get description => throw _privateConstructorUsedError;
-  String? get name => throw _privateConstructorUsedError;
-  String? get imageURL => throw _privateConstructorUsedError;
-  String get descriptorUri => throw _privateConstructorUsedError;
+  String? get description;
+  String? get name;
+  String? get imageURL;
+  String get descriptorUri;
   @JsonKey(name: 'created')
-  String get createdAt => throw _privateConstructorUsedError;
-  String get tokenId => throw _privateConstructorUsedError;
-  Collection get collection => throw _privateConstructorUsedError;
-  Address get owner => throw _privateConstructorUsedError;
-  Address get creator => throw _privateConstructorUsedError;
+  String get createdAt;
+  String get tokenId;
+  Collection get collection;
+  Address get owner;
+  Address get creator;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+  /// Create a copy of Collectible
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
   $CollectibleCopyWith<Collectible> get copyWith =>
-      throw _privateConstructorUsedError;
+      _$CollectibleCopyWithImpl<Collectible>(this as Collectible, _$identity);
+
+  /// Serializes this Collectible to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Collectible &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.imageURL, imageURL) ||
+                other.imageURL == imageURL) &&
+            (identical(other.descriptorUri, descriptorUri) ||
+                other.descriptorUri == descriptorUri) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt) &&
+            (identical(other.tokenId, tokenId) || other.tokenId == tokenId) &&
+            (identical(other.collection, collection) ||
+                other.collection == collection) &&
+            (identical(other.owner, owner) || other.owner == owner) &&
+            (identical(other.creator, creator) || other.creator == creator));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, description, name, imageURL,
+      descriptorUri, createdAt, tokenId, collection, owner, creator);
+
+  @override
+  String toString() {
+    return 'Collectible(description: $description, name: $name, imageURL: $imageURL, descriptorUri: $descriptorUri, createdAt: $createdAt, tokenId: $tokenId, collection: $collection, owner: $owner, creator: $creator)';
+  }
 }
 
 /// @nodoc
-abstract class $CollectibleCopyWith<$Res> {
+abstract mixin class $CollectibleCopyWith<$Res> {
   factory $CollectibleCopyWith(
-          Collectible value, $Res Function(Collectible) then) =
-      _$CollectibleCopyWithImpl<$Res, Collectible>;
+          Collectible value, $Res Function(Collectible) _then) =
+      _$CollectibleCopyWithImpl;
   @useResult
   $Res call(
       {String? description,
@@ -60,15 +90,14 @@ abstract class $CollectibleCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CollectibleCopyWithImpl<$Res, $Val extends Collectible>
-    implements $CollectibleCopyWith<$Res> {
-  _$CollectibleCopyWithImpl(this._value, this._then);
+class _$CollectibleCopyWithImpl<$Res> implements $CollectibleCopyWith<$Res> {
+  _$CollectibleCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final Collectible _self;
+  final $Res Function(Collectible) _then;
 
+  /// Create a copy of Collectible
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -82,164 +111,295 @@ class _$CollectibleCopyWithImpl<$Res, $Val extends Collectible>
     Object? owner = null,
     Object? creator = null,
   }) {
-    return _then(_value.copyWith(
+    return _then(_self.copyWith(
       description: freezed == description
-          ? _value.description
+          ? _self.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
       name: freezed == name
-          ? _value.name
+          ? _self.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
       imageURL: freezed == imageURL
-          ? _value.imageURL
+          ? _self.imageURL
           : imageURL // ignore: cast_nullable_to_non_nullable
               as String?,
       descriptorUri: null == descriptorUri
-          ? _value.descriptorUri
+          ? _self.descriptorUri
           : descriptorUri // ignore: cast_nullable_to_non_nullable
               as String,
       createdAt: null == createdAt
-          ? _value.createdAt
+          ? _self.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as String,
       tokenId: null == tokenId
-          ? _value.tokenId
+          ? _self.tokenId
           : tokenId // ignore: cast_nullable_to_non_nullable
               as String,
       collection: null == collection
-          ? _value.collection
+          ? _self.collection
           : collection // ignore: cast_nullable_to_non_nullable
               as Collection,
       owner: null == owner
-          ? _value.owner
+          ? _self.owner
           : owner // ignore: cast_nullable_to_non_nullable
               as Address,
       creator: null == creator
-          ? _value.creator
-          : creator // ignore: cast_nullable_to_non_nullable
-              as Address,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CollectionCopyWith<$Res> get collection {
-    return $CollectionCopyWith<$Res>(_value.collection, (value) {
-      return _then(_value.copyWith(collection: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $AddressCopyWith<$Res> get owner {
-    return $AddressCopyWith<$Res>(_value.owner, (value) {
-      return _then(_value.copyWith(owner: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $AddressCopyWith<$Res> get creator {
-    return $AddressCopyWith<$Res>(_value.creator, (value) {
-      return _then(_value.copyWith(creator: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_CollectibleCopyWith<$Res>
-    implements $CollectibleCopyWith<$Res> {
-  factory _$$_CollectibleCopyWith(
-          _$_Collectible value, $Res Function(_$_Collectible) then) =
-      __$$_CollectibleCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String? description,
-      String? name,
-      String? imageURL,
-      String descriptorUri,
-      @JsonKey(name: 'created') String createdAt,
-      String tokenId,
-      Collection collection,
-      Address owner,
-      Address creator});
-
-  @override
-  $CollectionCopyWith<$Res> get collection;
-  @override
-  $AddressCopyWith<$Res> get owner;
-  @override
-  $AddressCopyWith<$Res> get creator;
-}
-
-/// @nodoc
-class __$$_CollectibleCopyWithImpl<$Res>
-    extends _$CollectibleCopyWithImpl<$Res, _$_Collectible>
-    implements _$$_CollectibleCopyWith<$Res> {
-  __$$_CollectibleCopyWithImpl(
-      _$_Collectible _value, $Res Function(_$_Collectible) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? description = freezed,
-    Object? name = freezed,
-    Object? imageURL = freezed,
-    Object? descriptorUri = null,
-    Object? createdAt = null,
-    Object? tokenId = null,
-    Object? collection = null,
-    Object? owner = null,
-    Object? creator = null,
-  }) {
-    return _then(_$_Collectible(
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      imageURL: freezed == imageURL
-          ? _value.imageURL
-          : imageURL // ignore: cast_nullable_to_non_nullable
-              as String?,
-      descriptorUri: null == descriptorUri
-          ? _value.descriptorUri
-          : descriptorUri // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as String,
-      tokenId: null == tokenId
-          ? _value.tokenId
-          : tokenId // ignore: cast_nullable_to_non_nullable
-              as String,
-      collection: null == collection
-          ? _value.collection
-          : collection // ignore: cast_nullable_to_non_nullable
-              as Collection,
-      owner: null == owner
-          ? _value.owner
-          : owner // ignore: cast_nullable_to_non_nullable
-              as Address,
-      creator: null == creator
-          ? _value.creator
+          ? _self.creator
           : creator // ignore: cast_nullable_to_non_nullable
               as Address,
     ));
+  }
+
+  /// Create a copy of Collectible
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CollectionCopyWith<$Res> get collection {
+    return $CollectionCopyWith<$Res>(_self.collection, (value) {
+      return _then(_self.copyWith(collection: value));
+    });
+  }
+
+  /// Create a copy of Collectible
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AddressCopyWith<$Res> get owner {
+    return $AddressCopyWith<$Res>(_self.owner, (value) {
+      return _then(_self.copyWith(owner: value));
+    });
+  }
+
+  /// Create a copy of Collectible
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AddressCopyWith<$Res> get creator {
+    return $AddressCopyWith<$Res>(_self.creator, (value) {
+      return _then(_self.copyWith(creator: value));
+    });
+  }
+}
+
+/// Adds pattern-matching-related methods to [Collectible].
+extension CollectiblePatterns on Collectible {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_Collectible value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Collectible() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_Collectible value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Collectible():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_Collectible value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Collectible() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            String? description,
+            String? name,
+            String? imageURL,
+            String descriptorUri,
+            @JsonKey(name: 'created') String createdAt,
+            String tokenId,
+            Collection collection,
+            Address owner,
+            Address creator)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Collectible() when $default != null:
+        return $default(
+            _that.description,
+            _that.name,
+            _that.imageURL,
+            _that.descriptorUri,
+            _that.createdAt,
+            _that.tokenId,
+            _that.collection,
+            _that.owner,
+            _that.creator);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            String? description,
+            String? name,
+            String? imageURL,
+            String descriptorUri,
+            @JsonKey(name: 'created') String createdAt,
+            String tokenId,
+            Collection collection,
+            Address owner,
+            Address creator)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Collectible():
+        return $default(
+            _that.description,
+            _that.name,
+            _that.imageURL,
+            _that.descriptorUri,
+            _that.createdAt,
+            _that.tokenId,
+            _that.collection,
+            _that.owner,
+            _that.creator);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            String? description,
+            String? name,
+            String? imageURL,
+            String descriptorUri,
+            @JsonKey(name: 'created') String createdAt,
+            String tokenId,
+            Collection collection,
+            Address owner,
+            Address creator)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Collectible() when $default != null:
+        return $default(
+            _that.description,
+            _that.name,
+            _that.imageURL,
+            _that.descriptorUri,
+            _that.createdAt,
+            _that.tokenId,
+            _that.collection,
+            _that.owner,
+            _that.creator);
+      case _:
+        return null;
+    }
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Collectible extends _Collectible {
-  _$_Collectible(
+class _Collectible extends Collectible {
+  _Collectible(
       {this.description,
       this.name,
       this.imageURL,
@@ -250,9 +410,8 @@ class _$_Collectible extends _Collectible {
       required this.owner,
       required this.creator})
       : super._();
-
-  factory _$_Collectible.fromJson(Map<String, dynamic> json) =>
-      _$$_CollectibleFromJson(json);
+  factory _Collectible.fromJson(Map<String, dynamic> json) =>
+      _$CollectibleFromJson(json);
 
   @override
   final String? description;
@@ -274,16 +433,26 @@ class _$_Collectible extends _Collectible {
   @override
   final Address creator;
 
+  /// Create a copy of Collectible
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'Collectible(description: $description, name: $name, imageURL: $imageURL, descriptorUri: $descriptorUri, createdAt: $createdAt, tokenId: $tokenId, collection: $collection, owner: $owner, creator: $creator)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$CollectibleCopyWith<_Collectible> get copyWith =>
+      __$CollectibleCopyWithImpl<_Collectible>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$CollectibleToJson(
+      this,
+    );
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Collectible &&
+            other is _Collectible &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.name, name) || other.name == name) &&
@@ -300,62 +469,135 @@ class _$_Collectible extends _Collectible {
             (identical(other.creator, creator) || other.creator == creator));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, description, name, imageURL,
       descriptorUri, createdAt, tokenId, collection, owner, creator);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$_CollectibleCopyWith<_$_Collectible> get copyWith =>
-      __$$_CollectibleCopyWithImpl<_$_Collectible>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_CollectibleToJson(
-      this,
-    );
+  String toString() {
+    return 'Collectible(description: $description, name: $name, imageURL: $imageURL, descriptorUri: $descriptorUri, createdAt: $createdAt, tokenId: $tokenId, collection: $collection, owner: $owner, creator: $creator)';
   }
 }
 
-abstract class _Collectible extends Collectible {
-  factory _Collectible(
-      {final String? description,
-      final String? name,
-      final String? imageURL,
-      required final String descriptorUri,
-      @JsonKey(name: 'created') required final String createdAt,
-      required final String tokenId,
-      required final Collection collection,
-      required final Address owner,
-      required final Address creator}) = _$_Collectible;
-  _Collectible._() : super._();
+/// @nodoc
+abstract mixin class _$CollectibleCopyWith<$Res>
+    implements $CollectibleCopyWith<$Res> {
+  factory _$CollectibleCopyWith(
+          _Collectible value, $Res Function(_Collectible) _then) =
+      __$CollectibleCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {String? description,
+      String? name,
+      String? imageURL,
+      String descriptorUri,
+      @JsonKey(name: 'created') String createdAt,
+      String tokenId,
+      Collection collection,
+      Address owner,
+      Address creator});
 
-  factory _Collectible.fromJson(Map<String, dynamic> json) =
-      _$_Collectible.fromJson;
-
   @override
-  String? get description;
+  $CollectionCopyWith<$Res> get collection;
   @override
-  String? get name;
+  $AddressCopyWith<$Res> get owner;
   @override
-  String? get imageURL;
-  @override
-  String get descriptorUri;
-  @override
-  @JsonKey(name: 'created')
-  String get createdAt;
-  @override
-  String get tokenId;
-  @override
-  Collection get collection;
-  @override
-  Address get owner;
-  @override
-  Address get creator;
-  @override
-  @JsonKey(ignore: true)
-  _$$_CollectibleCopyWith<_$_Collectible> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AddressCopyWith<$Res> get creator;
 }
+
+/// @nodoc
+class __$CollectibleCopyWithImpl<$Res> implements _$CollectibleCopyWith<$Res> {
+  __$CollectibleCopyWithImpl(this._self, this._then);
+
+  final _Collectible _self;
+  final $Res Function(_Collectible) _then;
+
+  /// Create a copy of Collectible
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? description = freezed,
+    Object? name = freezed,
+    Object? imageURL = freezed,
+    Object? descriptorUri = null,
+    Object? createdAt = null,
+    Object? tokenId = null,
+    Object? collection = null,
+    Object? owner = null,
+    Object? creator = null,
+  }) {
+    return _then(_Collectible(
+      description: freezed == description
+          ? _self.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: freezed == name
+          ? _self.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      imageURL: freezed == imageURL
+          ? _self.imageURL
+          : imageURL // ignore: cast_nullable_to_non_nullable
+              as String?,
+      descriptorUri: null == descriptorUri
+          ? _self.descriptorUri
+          : descriptorUri // ignore: cast_nullable_to_non_nullable
+              as String,
+      createdAt: null == createdAt
+          ? _self.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as String,
+      tokenId: null == tokenId
+          ? _self.tokenId
+          : tokenId // ignore: cast_nullable_to_non_nullable
+              as String,
+      collection: null == collection
+          ? _self.collection
+          : collection // ignore: cast_nullable_to_non_nullable
+              as Collection,
+      owner: null == owner
+          ? _self.owner
+          : owner // ignore: cast_nullable_to_non_nullable
+              as Address,
+      creator: null == creator
+          ? _self.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as Address,
+    ));
+  }
+
+  /// Create a copy of Collectible
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CollectionCopyWith<$Res> get collection {
+    return $CollectionCopyWith<$Res>(_self.collection, (value) {
+      return _then(_self.copyWith(collection: value));
+    });
+  }
+
+  /// Create a copy of Collectible
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AddressCopyWith<$Res> get owner {
+    return $AddressCopyWith<$Res>(_self.owner, (value) {
+      return _then(_self.copyWith(owner: value));
+    });
+  }
+
+  /// Create a copy of Collectible
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AddressCopyWith<$Res> get creator {
+    return $AddressCopyWith<$Res>(_self.creator, (value) {
+      return _then(_self.copyWith(creator: value));
+    });
+  }
+}
+
+// dart format on

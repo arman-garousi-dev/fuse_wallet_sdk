@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,141 +9,31 @@ part of 'stake.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-StakeRequestBody _$StakeRequestBodyFromJson(Map<String, dynamic> json) {
-  return _StakeRequestBody.fromJson(json);
-}
 
 /// @nodoc
 mixin _$StakeRequestBody {
-  String get accountAddress => throw _privateConstructorUsedError;
-  String get tokenAmount => throw _privateConstructorUsedError;
-  String get tokenAddress => throw _privateConstructorUsedError;
+  String get accountAddress;
+  String get tokenAmount;
+  String get tokenAddress;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+  /// Create a copy of StakeRequestBody
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
   $StakeRequestBodyCopyWith<StakeRequestBody> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+      _$StakeRequestBodyCopyWithImpl<StakeRequestBody>(
+          this as StakeRequestBody, _$identity);
 
-/// @nodoc
-abstract class $StakeRequestBodyCopyWith<$Res> {
-  factory $StakeRequestBodyCopyWith(
-          StakeRequestBody value, $Res Function(StakeRequestBody) then) =
-      _$StakeRequestBodyCopyWithImpl<$Res, StakeRequestBody>;
-  @useResult
-  $Res call({String accountAddress, String tokenAmount, String tokenAddress});
-}
-
-/// @nodoc
-class _$StakeRequestBodyCopyWithImpl<$Res, $Val extends StakeRequestBody>
-    implements $StakeRequestBodyCopyWith<$Res> {
-  _$StakeRequestBodyCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? accountAddress = null,
-    Object? tokenAmount = null,
-    Object? tokenAddress = null,
-  }) {
-    return _then(_value.copyWith(
-      accountAddress: null == accountAddress
-          ? _value.accountAddress
-          : accountAddress // ignore: cast_nullable_to_non_nullable
-              as String,
-      tokenAmount: null == tokenAmount
-          ? _value.tokenAmount
-          : tokenAmount // ignore: cast_nullable_to_non_nullable
-              as String,
-      tokenAddress: null == tokenAddress
-          ? _value.tokenAddress
-          : tokenAddress // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$_StakeRequestBodyCopyWith<$Res>
-    implements $StakeRequestBodyCopyWith<$Res> {
-  factory _$$_StakeRequestBodyCopyWith(
-          _$_StakeRequestBody value, $Res Function(_$_StakeRequestBody) then) =
-      __$$_StakeRequestBodyCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String accountAddress, String tokenAmount, String tokenAddress});
-}
-
-/// @nodoc
-class __$$_StakeRequestBodyCopyWithImpl<$Res>
-    extends _$StakeRequestBodyCopyWithImpl<$Res, _$_StakeRequestBody>
-    implements _$$_StakeRequestBodyCopyWith<$Res> {
-  __$$_StakeRequestBodyCopyWithImpl(
-      _$_StakeRequestBody _value, $Res Function(_$_StakeRequestBody) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? accountAddress = null,
-    Object? tokenAmount = null,
-    Object? tokenAddress = null,
-  }) {
-    return _then(_$_StakeRequestBody(
-      accountAddress: null == accountAddress
-          ? _value.accountAddress
-          : accountAddress // ignore: cast_nullable_to_non_nullable
-              as String,
-      tokenAmount: null == tokenAmount
-          ? _value.tokenAmount
-          : tokenAmount // ignore: cast_nullable_to_non_nullable
-              as String,
-      tokenAddress: null == tokenAddress
-          ? _value.tokenAddress
-          : tokenAddress // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_StakeRequestBody implements _StakeRequestBody {
-  _$_StakeRequestBody(
-      {required this.accountAddress,
-      required this.tokenAmount,
-      required this.tokenAddress});
-
-  factory _$_StakeRequestBody.fromJson(Map<String, dynamic> json) =>
-      _$$_StakeRequestBodyFromJson(json);
+  /// Serializes this StakeRequestBody to a JSON map.
+  Map<String, dynamic> toJson();
 
   @override
-  final String accountAddress;
-  @override
-  final String tokenAmount;
-  @override
-  final String tokenAddress;
-
-  @override
-  String toString() {
-    return 'StakeRequestBody(accountAddress: $accountAddress, tokenAmount: $tokenAmount, tokenAddress: $tokenAddress)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_StakeRequestBody &&
+            other is StakeRequestBody &&
             (identical(other.accountAddress, accountAddress) ||
                 other.accountAddress == accountAddress) &&
             (identical(other.tokenAmount, tokenAmount) ||
@@ -152,200 +42,645 @@ class _$_StakeRequestBody implements _StakeRequestBody {
                 other.tokenAddress == tokenAddress));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, accountAddress, tokenAmount, tokenAddress);
 
-  @JsonKey(ignore: true)
   @override
+  String toString() {
+    return 'StakeRequestBody(accountAddress: $accountAddress, tokenAmount: $tokenAmount, tokenAddress: $tokenAddress)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $StakeRequestBodyCopyWith<$Res> {
+  factory $StakeRequestBodyCopyWith(
+          StakeRequestBody value, $Res Function(StakeRequestBody) _then) =
+      _$StakeRequestBodyCopyWithImpl;
+  @useResult
+  $Res call({String accountAddress, String tokenAmount, String tokenAddress});
+}
+
+/// @nodoc
+class _$StakeRequestBodyCopyWithImpl<$Res>
+    implements $StakeRequestBodyCopyWith<$Res> {
+  _$StakeRequestBodyCopyWithImpl(this._self, this._then);
+
+  final StakeRequestBody _self;
+  final $Res Function(StakeRequestBody) _then;
+
+  /// Create a copy of StakeRequestBody
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  _$$_StakeRequestBodyCopyWith<_$_StakeRequestBody> get copyWith =>
-      __$$_StakeRequestBodyCopyWithImpl<_$_StakeRequestBody>(this, _$identity);
+  @override
+  $Res call({
+    Object? accountAddress = null,
+    Object? tokenAmount = null,
+    Object? tokenAddress = null,
+  }) {
+    return _then(_self.copyWith(
+      accountAddress: null == accountAddress
+          ? _self.accountAddress
+          : accountAddress // ignore: cast_nullable_to_non_nullable
+              as String,
+      tokenAmount: null == tokenAmount
+          ? _self.tokenAmount
+          : tokenAmount // ignore: cast_nullable_to_non_nullable
+              as String,
+      tokenAddress: null == tokenAddress
+          ? _self.tokenAddress
+          : tokenAddress // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [StakeRequestBody].
+extension StakeRequestBodyPatterns on StakeRequestBody {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_StakeRequestBody value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _StakeRequestBody() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_StakeRequestBody value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _StakeRequestBody():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_StakeRequestBody value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _StakeRequestBody() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            String accountAddress, String tokenAmount, String tokenAddress)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _StakeRequestBody() when $default != null:
+        return $default(
+            _that.accountAddress, _that.tokenAmount, _that.tokenAddress);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            String accountAddress, String tokenAmount, String tokenAddress)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _StakeRequestBody():
+        return $default(
+            _that.accountAddress, _that.tokenAmount, _that.tokenAddress);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            String accountAddress, String tokenAmount, String tokenAddress)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _StakeRequestBody() when $default != null:
+        return $default(
+            _that.accountAddress, _that.tokenAmount, _that.tokenAddress);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _StakeRequestBody implements StakeRequestBody {
+  _StakeRequestBody(
+      {required this.accountAddress,
+      required this.tokenAmount,
+      required this.tokenAddress});
+  factory _StakeRequestBody.fromJson(Map<String, dynamic> json) =>
+      _$StakeRequestBodyFromJson(json);
+
+  @override
+  final String accountAddress;
+  @override
+  final String tokenAmount;
+  @override
+  final String tokenAddress;
+
+  /// Create a copy of StakeRequestBody
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$StakeRequestBodyCopyWith<_StakeRequestBody> get copyWith =>
+      __$StakeRequestBodyCopyWithImpl<_StakeRequestBody>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StakeRequestBodyToJson(
+    return _$StakeRequestBodyToJson(
       this,
     );
   }
-}
-
-abstract class _StakeRequestBody implements StakeRequestBody {
-  factory _StakeRequestBody(
-      {required final String accountAddress,
-      required final String tokenAmount,
-      required final String tokenAddress}) = _$_StakeRequestBody;
-
-  factory _StakeRequestBody.fromJson(Map<String, dynamic> json) =
-      _$_StakeRequestBody.fromJson;
 
   @override
-  String get accountAddress;
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _StakeRequestBody &&
+            (identical(other.accountAddress, accountAddress) ||
+                other.accountAddress == accountAddress) &&
+            (identical(other.tokenAmount, tokenAmount) ||
+                other.tokenAmount == tokenAmount) &&
+            (identical(other.tokenAddress, tokenAddress) ||
+                other.tokenAddress == tokenAddress));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  String get tokenAmount;
+  int get hashCode =>
+      Object.hash(runtimeType, accountAddress, tokenAmount, tokenAddress);
+
   @override
-  String get tokenAddress;
-  @override
-  @JsonKey(ignore: true)
-  _$$_StakeRequestBodyCopyWith<_$_StakeRequestBody> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-StakeResponseBody _$StakeResponseBodyFromJson(Map<String, dynamic> json) {
-  return _StakeResponseBody.fromJson(json);
-}
-
-/// @nodoc
-mixin _$StakeResponseBody {
-  String get contractAddress => throw _privateConstructorUsedError;
-  String get encodedABI => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $StakeResponseBodyCopyWith<StakeResponseBody> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $StakeResponseBodyCopyWith<$Res> {
-  factory $StakeResponseBodyCopyWith(
-          StakeResponseBody value, $Res Function(StakeResponseBody) then) =
-      _$StakeResponseBodyCopyWithImpl<$Res, StakeResponseBody>;
-  @useResult
-  $Res call({String contractAddress, String encodedABI});
-}
-
-/// @nodoc
-class _$StakeResponseBodyCopyWithImpl<$Res, $Val extends StakeResponseBody>
-    implements $StakeResponseBodyCopyWith<$Res> {
-  _$StakeResponseBodyCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? contractAddress = null,
-    Object? encodedABI = null,
-  }) {
-    return _then(_value.copyWith(
-      contractAddress: null == contractAddress
-          ? _value.contractAddress
-          : contractAddress // ignore: cast_nullable_to_non_nullable
-              as String,
-      encodedABI: null == encodedABI
-          ? _value.encodedABI
-          : encodedABI // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  String toString() {
+    return 'StakeRequestBody(accountAddress: $accountAddress, tokenAmount: $tokenAmount, tokenAddress: $tokenAddress)';
   }
 }
 
 /// @nodoc
-abstract class _$$_StakeResponseBodyCopyWith<$Res>
-    implements $StakeResponseBodyCopyWith<$Res> {
-  factory _$$_StakeResponseBodyCopyWith(_$_StakeResponseBody value,
-          $Res Function(_$_StakeResponseBody) then) =
-      __$$_StakeResponseBodyCopyWithImpl<$Res>;
+abstract mixin class _$StakeRequestBodyCopyWith<$Res>
+    implements $StakeRequestBodyCopyWith<$Res> {
+  factory _$StakeRequestBodyCopyWith(
+          _StakeRequestBody value, $Res Function(_StakeRequestBody) _then) =
+      __$StakeRequestBodyCopyWithImpl;
   @override
   @useResult
-  $Res call({String contractAddress, String encodedABI});
+  $Res call({String accountAddress, String tokenAmount, String tokenAddress});
 }
 
 /// @nodoc
-class __$$_StakeResponseBodyCopyWithImpl<$Res>
-    extends _$StakeResponseBodyCopyWithImpl<$Res, _$_StakeResponseBody>
-    implements _$$_StakeResponseBodyCopyWith<$Res> {
-  __$$_StakeResponseBodyCopyWithImpl(
-      _$_StakeResponseBody _value, $Res Function(_$_StakeResponseBody) _then)
-      : super(_value, _then);
+class __$StakeRequestBodyCopyWithImpl<$Res>
+    implements _$StakeRequestBodyCopyWith<$Res> {
+  __$StakeRequestBodyCopyWithImpl(this._self, this._then);
 
-  @pragma('vm:prefer-inline')
+  final _StakeRequestBody _self;
+  final $Res Function(_StakeRequestBody) _then;
+
+  /// Create a copy of StakeRequestBody
+  /// with the given fields replaced by the non-null parameter values.
   @override
+  @pragma('vm:prefer-inline')
   $Res call({
-    Object? contractAddress = null,
-    Object? encodedABI = null,
+    Object? accountAddress = null,
+    Object? tokenAmount = null,
+    Object? tokenAddress = null,
   }) {
-    return _then(_$_StakeResponseBody(
-      contractAddress: null == contractAddress
-          ? _value.contractAddress
-          : contractAddress // ignore: cast_nullable_to_non_nullable
+    return _then(_StakeRequestBody(
+      accountAddress: null == accountAddress
+          ? _self.accountAddress
+          : accountAddress // ignore: cast_nullable_to_non_nullable
               as String,
-      encodedABI: null == encodedABI
-          ? _value.encodedABI
-          : encodedABI // ignore: cast_nullable_to_non_nullable
+      tokenAmount: null == tokenAmount
+          ? _self.tokenAmount
+          : tokenAmount // ignore: cast_nullable_to_non_nullable
+              as String,
+      tokenAddress: null == tokenAddress
+          ? _self.tokenAddress
+          : tokenAddress // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_StakeResponseBody implements _StakeResponseBody {
-  _$_StakeResponseBody(
-      {required this.contractAddress, required this.encodedABI});
+mixin _$StakeResponseBody {
+  String get contractAddress;
+  String get encodedABI;
 
-  factory _$_StakeResponseBody.fromJson(Map<String, dynamic> json) =>
-      _$$_StakeResponseBodyFromJson(json);
+  /// Create a copy of StakeResponseBody
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $StakeResponseBodyCopyWith<StakeResponseBody> get copyWith =>
+      _$StakeResponseBodyCopyWithImpl<StakeResponseBody>(
+          this as StakeResponseBody, _$identity);
 
-  @override
-  final String contractAddress;
-  @override
-  final String encodedABI;
-
-  @override
-  String toString() {
-    return 'StakeResponseBody(contractAddress: $contractAddress, encodedABI: $encodedABI)';
-  }
+  /// Serializes this StakeResponseBody to a JSON map.
+  Map<String, dynamic> toJson();
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_StakeResponseBody &&
+            other is StakeResponseBody &&
             (identical(other.contractAddress, contractAddress) ||
                 other.contractAddress == contractAddress) &&
             (identical(other.encodedABI, encodedABI) ||
                 other.encodedABI == encodedABI));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, contractAddress, encodedABI);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$_StakeResponseBodyCopyWith<_$_StakeResponseBody> get copyWith =>
-      __$$_StakeResponseBodyCopyWithImpl<_$_StakeResponseBody>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_StakeResponseBodyToJson(
-      this,
-    );
+  String toString() {
+    return 'StakeResponseBody(contractAddress: $contractAddress, encodedABI: $encodedABI)';
   }
 }
 
-abstract class _StakeResponseBody implements StakeResponseBody {
-  factory _StakeResponseBody(
-      {required final String contractAddress,
-      required final String encodedABI}) = _$_StakeResponseBody;
-
-  factory _StakeResponseBody.fromJson(Map<String, dynamic> json) =
-      _$_StakeResponseBody.fromJson;
-
-  @override
-  String get contractAddress;
-  @override
-  String get encodedABI;
-  @override
-  @JsonKey(ignore: true)
-  _$$_StakeResponseBodyCopyWith<_$_StakeResponseBody> get copyWith =>
-      throw _privateConstructorUsedError;
+/// @nodoc
+abstract mixin class $StakeResponseBodyCopyWith<$Res> {
+  factory $StakeResponseBodyCopyWith(
+          StakeResponseBody value, $Res Function(StakeResponseBody) _then) =
+      _$StakeResponseBodyCopyWithImpl;
+  @useResult
+  $Res call({String contractAddress, String encodedABI});
 }
+
+/// @nodoc
+class _$StakeResponseBodyCopyWithImpl<$Res>
+    implements $StakeResponseBodyCopyWith<$Res> {
+  _$StakeResponseBodyCopyWithImpl(this._self, this._then);
+
+  final StakeResponseBody _self;
+  final $Res Function(StakeResponseBody) _then;
+
+  /// Create a copy of StakeResponseBody
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? contractAddress = null,
+    Object? encodedABI = null,
+  }) {
+    return _then(_self.copyWith(
+      contractAddress: null == contractAddress
+          ? _self.contractAddress
+          : contractAddress // ignore: cast_nullable_to_non_nullable
+              as String,
+      encodedABI: null == encodedABI
+          ? _self.encodedABI
+          : encodedABI // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [StakeResponseBody].
+extension StakeResponseBodyPatterns on StakeResponseBody {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_StakeResponseBody value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _StakeResponseBody() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_StakeResponseBody value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _StakeResponseBody():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_StakeResponseBody value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _StakeResponseBody() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String contractAddress, String encodedABI)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _StakeResponseBody() when $default != null:
+        return $default(_that.contractAddress, _that.encodedABI);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String contractAddress, String encodedABI) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _StakeResponseBody():
+        return $default(_that.contractAddress, _that.encodedABI);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(String contractAddress, String encodedABI)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _StakeResponseBody() when $default != null:
+        return $default(_that.contractAddress, _that.encodedABI);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _StakeResponseBody implements StakeResponseBody {
+  _StakeResponseBody({required this.contractAddress, required this.encodedABI});
+  factory _StakeResponseBody.fromJson(Map<String, dynamic> json) =>
+      _$StakeResponseBodyFromJson(json);
+
+  @override
+  final String contractAddress;
+  @override
+  final String encodedABI;
+
+  /// Create a copy of StakeResponseBody
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$StakeResponseBodyCopyWith<_StakeResponseBody> get copyWith =>
+      __$StakeResponseBodyCopyWithImpl<_StakeResponseBody>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$StakeResponseBodyToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _StakeResponseBody &&
+            (identical(other.contractAddress, contractAddress) ||
+                other.contractAddress == contractAddress) &&
+            (identical(other.encodedABI, encodedABI) ||
+                other.encodedABI == encodedABI));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, contractAddress, encodedABI);
+
+  @override
+  String toString() {
+    return 'StakeResponseBody(contractAddress: $contractAddress, encodedABI: $encodedABI)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$StakeResponseBodyCopyWith<$Res>
+    implements $StakeResponseBodyCopyWith<$Res> {
+  factory _$StakeResponseBodyCopyWith(
+          _StakeResponseBody value, $Res Function(_StakeResponseBody) _then) =
+      __$StakeResponseBodyCopyWithImpl;
+  @override
+  @useResult
+  $Res call({String contractAddress, String encodedABI});
+}
+
+/// @nodoc
+class __$StakeResponseBodyCopyWithImpl<$Res>
+    implements _$StakeResponseBodyCopyWith<$Res> {
+  __$StakeResponseBodyCopyWithImpl(this._self, this._then);
+
+  final _StakeResponseBody _self;
+  final $Res Function(_StakeResponseBody) _then;
+
+  /// Create a copy of StakeResponseBody
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? contractAddress = null,
+    Object? encodedABI = null,
+  }) {
+    return _then(_StakeResponseBody(
+      contractAddress: null == contractAddress
+          ? _self.contractAddress
+          : contractAddress // ignore: cast_nullable_to_non_nullable
+              as String,
+      encodedABI: null == encodedABI
+          ? _self.encodedABI
+          : encodedABI // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+// dart format on

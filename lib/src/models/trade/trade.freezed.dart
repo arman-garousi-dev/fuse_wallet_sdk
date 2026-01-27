@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,111 +9,75 @@ part of 'trade.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-Trade _$TradeFromJson(Map<String, dynamic> json) {
-  return _Trade.fromJson(json);
-}
 
 /// @nodoc
 mixin _$Trade {
-  String get inputAmount => throw _privateConstructorUsedError;
-  String get outputAmount => throw _privateConstructorUsedError;
-  List<String> get route => throw _privateConstructorUsedError;
-  String get inputToken => throw _privateConstructorUsedError;
-  String get outputToken => throw _privateConstructorUsedError;
-  String get executionPrice => throw _privateConstructorUsedError;
-  String get nextMidPrice => throw _privateConstructorUsedError;
-  String get priceImpact => throw _privateConstructorUsedError;
+  String get inputAmount;
+  String get outputAmount;
+  List<String> get route;
+  String get inputToken;
+  String get outputToken;
+  String get executionPrice;
+  String get nextMidPrice;
+  String get priceImpact;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $TradeCopyWith<Trade> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $TradeCopyWith<$Res> {
-  factory $TradeCopyWith(Trade value, $Res Function(Trade) then) =
-      _$TradeCopyWithImpl<$Res, Trade>;
-  @useResult
-  $Res call(
-      {String inputAmount,
-      String outputAmount,
-      List<String> route,
-      String inputToken,
-      String outputToken,
-      String executionPrice,
-      String nextMidPrice,
-      String priceImpact});
-}
-
-/// @nodoc
-class _$TradeCopyWithImpl<$Res, $Val extends Trade>
-    implements $TradeCopyWith<$Res> {
-  _$TradeCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of Trade
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $TradeCopyWith<Trade> get copyWith =>
+      _$TradeCopyWithImpl<Trade>(this as Trade, _$identity);
+
+  /// Serializes this Trade to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? inputAmount = null,
-    Object? outputAmount = null,
-    Object? route = null,
-    Object? inputToken = null,
-    Object? outputToken = null,
-    Object? executionPrice = null,
-    Object? nextMidPrice = null,
-    Object? priceImpact = null,
-  }) {
-    return _then(_value.copyWith(
-      inputAmount: null == inputAmount
-          ? _value.inputAmount
-          : inputAmount // ignore: cast_nullable_to_non_nullable
-              as String,
-      outputAmount: null == outputAmount
-          ? _value.outputAmount
-          : outputAmount // ignore: cast_nullable_to_non_nullable
-              as String,
-      route: null == route
-          ? _value.route
-          : route // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      inputToken: null == inputToken
-          ? _value.inputToken
-          : inputToken // ignore: cast_nullable_to_non_nullable
-              as String,
-      outputToken: null == outputToken
-          ? _value.outputToken
-          : outputToken // ignore: cast_nullable_to_non_nullable
-              as String,
-      executionPrice: null == executionPrice
-          ? _value.executionPrice
-          : executionPrice // ignore: cast_nullable_to_non_nullable
-              as String,
-      nextMidPrice: null == nextMidPrice
-          ? _value.nextMidPrice
-          : nextMidPrice // ignore: cast_nullable_to_non_nullable
-              as String,
-      priceImpact: null == priceImpact
-          ? _value.priceImpact
-          : priceImpact // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Trade &&
+            (identical(other.inputAmount, inputAmount) ||
+                other.inputAmount == inputAmount) &&
+            (identical(other.outputAmount, outputAmount) ||
+                other.outputAmount == outputAmount) &&
+            const DeepCollectionEquality().equals(other.route, route) &&
+            (identical(other.inputToken, inputToken) ||
+                other.inputToken == inputToken) &&
+            (identical(other.outputToken, outputToken) ||
+                other.outputToken == outputToken) &&
+            (identical(other.executionPrice, executionPrice) ||
+                other.executionPrice == executionPrice) &&
+            (identical(other.nextMidPrice, nextMidPrice) ||
+                other.nextMidPrice == nextMidPrice) &&
+            (identical(other.priceImpact, priceImpact) ||
+                other.priceImpact == priceImpact));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      inputAmount,
+      outputAmount,
+      const DeepCollectionEquality().hash(route),
+      inputToken,
+      outputToken,
+      executionPrice,
+      nextMidPrice,
+      priceImpact);
+
+  @override
+  String toString() {
+    return 'Trade(inputAmount: $inputAmount, outputAmount: $outputAmount, route: $route, inputToken: $inputToken, outputToken: $outputToken, executionPrice: $executionPrice, nextMidPrice: $nextMidPrice, priceImpact: $priceImpact)';
   }
 }
 
 /// @nodoc
-abstract class _$$_TradeCopyWith<$Res> implements $TradeCopyWith<$Res> {
-  factory _$$_TradeCopyWith(_$_Trade value, $Res Function(_$_Trade) then) =
-      __$$_TradeCopyWithImpl<$Res>;
-  @override
+abstract mixin class $TradeCopyWith<$Res> {
+  factory $TradeCopyWith(Trade value, $Res Function(Trade) _then) =
+      _$TradeCopyWithImpl;
   @useResult
   $Res call(
       {String inputAmount,
@@ -127,11 +91,14 @@ abstract class _$$_TradeCopyWith<$Res> implements $TradeCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_TradeCopyWithImpl<$Res> extends _$TradeCopyWithImpl<$Res, _$_Trade>
-    implements _$$_TradeCopyWith<$Res> {
-  __$$_TradeCopyWithImpl(_$_Trade _value, $Res Function(_$_Trade) _then)
-      : super(_value, _then);
+class _$TradeCopyWithImpl<$Res> implements $TradeCopyWith<$Res> {
+  _$TradeCopyWithImpl(this._self, this._then);
 
+  final Trade _self;
+  final $Res Function(Trade) _then;
+
+  /// Create a copy of Trade
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -144,47 +111,255 @@ class __$$_TradeCopyWithImpl<$Res> extends _$TradeCopyWithImpl<$Res, _$_Trade>
     Object? nextMidPrice = null,
     Object? priceImpact = null,
   }) {
-    return _then(_$_Trade(
+    return _then(_self.copyWith(
       inputAmount: null == inputAmount
-          ? _value.inputAmount
+          ? _self.inputAmount
           : inputAmount // ignore: cast_nullable_to_non_nullable
               as String,
       outputAmount: null == outputAmount
-          ? _value.outputAmount
+          ? _self.outputAmount
           : outputAmount // ignore: cast_nullable_to_non_nullable
               as String,
       route: null == route
-          ? _value.route
+          ? _self.route
           : route // ignore: cast_nullable_to_non_nullable
               as List<String>,
       inputToken: null == inputToken
-          ? _value.inputToken
+          ? _self.inputToken
           : inputToken // ignore: cast_nullable_to_non_nullable
               as String,
       outputToken: null == outputToken
-          ? _value.outputToken
+          ? _self.outputToken
           : outputToken // ignore: cast_nullable_to_non_nullable
               as String,
       executionPrice: null == executionPrice
-          ? _value.executionPrice
+          ? _self.executionPrice
           : executionPrice // ignore: cast_nullable_to_non_nullable
               as String,
       nextMidPrice: null == nextMidPrice
-          ? _value.nextMidPrice
+          ? _self.nextMidPrice
           : nextMidPrice // ignore: cast_nullable_to_non_nullable
               as String,
       priceImpact: null == priceImpact
-          ? _value.priceImpact
+          ? _self.priceImpact
           : priceImpact // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [Trade].
+extension TradePatterns on Trade {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_Trade value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Trade() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_Trade value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Trade():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_Trade value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Trade() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            String inputAmount,
+            String outputAmount,
+            List<String> route,
+            String inputToken,
+            String outputToken,
+            String executionPrice,
+            String nextMidPrice,
+            String priceImpact)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Trade() when $default != null:
+        return $default(
+            _that.inputAmount,
+            _that.outputAmount,
+            _that.route,
+            _that.inputToken,
+            _that.outputToken,
+            _that.executionPrice,
+            _that.nextMidPrice,
+            _that.priceImpact);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            String inputAmount,
+            String outputAmount,
+            List<String> route,
+            String inputToken,
+            String outputToken,
+            String executionPrice,
+            String nextMidPrice,
+            String priceImpact)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Trade():
+        return $default(
+            _that.inputAmount,
+            _that.outputAmount,
+            _that.route,
+            _that.inputToken,
+            _that.outputToken,
+            _that.executionPrice,
+            _that.nextMidPrice,
+            _that.priceImpact);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            String inputAmount,
+            String outputAmount,
+            List<String> route,
+            String inputToken,
+            String outputToken,
+            String executionPrice,
+            String nextMidPrice,
+            String priceImpact)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Trade() when $default != null:
+        return $default(
+            _that.inputAmount,
+            _that.outputAmount,
+            _that.route,
+            _that.inputToken,
+            _that.outputToken,
+            _that.executionPrice,
+            _that.nextMidPrice,
+            _that.priceImpact);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
-class _$_Trade implements _Trade {
-  _$_Trade(
+class _Trade implements Trade {
+  _Trade(
       {required this.inputAmount,
       required this.outputAmount,
       required this.route,
@@ -193,9 +368,7 @@ class _$_Trade implements _Trade {
       required this.executionPrice,
       required this.nextMidPrice,
       required this.priceImpact});
-
-  factory _$_Trade.fromJson(Map<String, dynamic> json) =>
-      _$$_TradeFromJson(json);
+  factory _Trade.fromJson(Map<String, dynamic> json) => _$TradeFromJson(json);
 
   @override
   final String inputAmount;
@@ -214,16 +387,26 @@ class _$_Trade implements _Trade {
   @override
   final String priceImpact;
 
+  /// Create a copy of Trade
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'Trade(inputAmount: $inputAmount, outputAmount: $outputAmount, route: $route, inputToken: $inputToken, outputToken: $outputToken, executionPrice: $executionPrice, nextMidPrice: $nextMidPrice, priceImpact: $priceImpact)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$TradeCopyWith<_Trade> get copyWith =>
+      __$TradeCopyWithImpl<_Trade>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$TradeToJson(
+      this,
+    );
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Trade &&
+            other is _Trade &&
             (identical(other.inputAmount, inputAmount) ||
                 other.inputAmount == inputAmount) &&
             (identical(other.outputAmount, outputAmount) ||
@@ -241,7 +424,7 @@ class _$_Trade implements _Trade {
                 other.priceImpact == priceImpact));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -254,51 +437,85 @@ class _$_Trade implements _Trade {
       nextMidPrice,
       priceImpact);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$_TradeCopyWith<_$_Trade> get copyWith =>
-      __$$_TradeCopyWithImpl<_$_Trade>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_TradeToJson(
-      this,
-    );
+  String toString() {
+    return 'Trade(inputAmount: $inputAmount, outputAmount: $outputAmount, route: $route, inputToken: $inputToken, outputToken: $outputToken, executionPrice: $executionPrice, nextMidPrice: $nextMidPrice, priceImpact: $priceImpact)';
   }
 }
 
-abstract class _Trade implements Trade {
-  factory _Trade(
-      {required final String inputAmount,
-      required final String outputAmount,
-      required final List<String> route,
-      required final String inputToken,
-      required final String outputToken,
-      required final String executionPrice,
-      required final String nextMidPrice,
-      required final String priceImpact}) = _$_Trade;
-
-  factory _Trade.fromJson(Map<String, dynamic> json) = _$_Trade.fromJson;
-
+/// @nodoc
+abstract mixin class _$TradeCopyWith<$Res> implements $TradeCopyWith<$Res> {
+  factory _$TradeCopyWith(_Trade value, $Res Function(_Trade) _then) =
+      __$TradeCopyWithImpl;
   @override
-  String get inputAmount;
-  @override
-  String get outputAmount;
-  @override
-  List<String> get route;
-  @override
-  String get inputToken;
-  @override
-  String get outputToken;
-  @override
-  String get executionPrice;
-  @override
-  String get nextMidPrice;
-  @override
-  String get priceImpact;
-  @override
-  @JsonKey(ignore: true)
-  _$$_TradeCopyWith<_$_Trade> get copyWith =>
-      throw _privateConstructorUsedError;
+  @useResult
+  $Res call(
+      {String inputAmount,
+      String outputAmount,
+      List<String> route,
+      String inputToken,
+      String outputToken,
+      String executionPrice,
+      String nextMidPrice,
+      String priceImpact});
 }
+
+/// @nodoc
+class __$TradeCopyWithImpl<$Res> implements _$TradeCopyWith<$Res> {
+  __$TradeCopyWithImpl(this._self, this._then);
+
+  final _Trade _self;
+  final $Res Function(_Trade) _then;
+
+  /// Create a copy of Trade
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? inputAmount = null,
+    Object? outputAmount = null,
+    Object? route = null,
+    Object? inputToken = null,
+    Object? outputToken = null,
+    Object? executionPrice = null,
+    Object? nextMidPrice = null,
+    Object? priceImpact = null,
+  }) {
+    return _then(_Trade(
+      inputAmount: null == inputAmount
+          ? _self.inputAmount
+          : inputAmount // ignore: cast_nullable_to_non_nullable
+              as String,
+      outputAmount: null == outputAmount
+          ? _self.outputAmount
+          : outputAmount // ignore: cast_nullable_to_non_nullable
+              as String,
+      route: null == route
+          ? _self.route
+          : route // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      inputToken: null == inputToken
+          ? _self.inputToken
+          : inputToken // ignore: cast_nullable_to_non_nullable
+              as String,
+      outputToken: null == outputToken
+          ? _self.outputToken
+          : outputToken // ignore: cast_nullable_to_non_nullable
+              as String,
+      executionPrice: null == executionPrice
+          ? _self.executionPrice
+          : executionPrice // ignore: cast_nullable_to_non_nullable
+              as String,
+      nextMidPrice: null == nextMidPrice
+          ? _self.nextMidPrice
+          : nextMidPrice // ignore: cast_nullable_to_non_nullable
+              as String,
+      priceImpact: null == priceImpact
+          ? _self.priceImpact
+          : priceImpact // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+// dart format on

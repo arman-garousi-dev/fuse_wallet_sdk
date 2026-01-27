@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,140 +9,89 @@ part of 'relay.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-Relay _$RelayFromJson(Map<String, dynamic> json) {
-  return _Relay.fromJson(json);
-}
 
 /// @nodoc
 mixin _$Relay {
-  String get network => throw _privateConstructorUsedError;
-  int get gasPrice => throw _privateConstructorUsedError;
-  int get gasLimit => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get transactionBody =>
-      throw _privateConstructorUsedError;
-  String get walletAddress => throw _privateConstructorUsedError;
-  String get walletModuleAddress => throw _privateConstructorUsedError;
-  String get data => throw _privateConstructorUsedError;
-  String get nonce => throw _privateConstructorUsedError;
-  String get methodName => throw _privateConstructorUsedError;
-  String get signature => throw _privateConstructorUsedError;
-  String get walletModule => throw _privateConstructorUsedError;
-  String? get externalId => throw _privateConstructorUsedError;
+  String get network;
+  int get gasPrice;
+  int get gasLimit;
+  Map<String, dynamic>? get transactionBody;
+  String get walletAddress;
+  String get walletModuleAddress;
+  String get data;
+  String get nonce;
+  String get methodName;
+  String get signature;
+  String get walletModule;
+  String? get externalId;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $RelayCopyWith<Relay> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $RelayCopyWith<$Res> {
-  factory $RelayCopyWith(Relay value, $Res Function(Relay) then) =
-      _$RelayCopyWithImpl<$Res, Relay>;
-  @useResult
-  $Res call(
-      {String network,
-      int gasPrice,
-      int gasLimit,
-      Map<String, dynamic>? transactionBody,
-      String walletAddress,
-      String walletModuleAddress,
-      String data,
-      String nonce,
-      String methodName,
-      String signature,
-      String walletModule,
-      String? externalId});
-}
-
-/// @nodoc
-class _$RelayCopyWithImpl<$Res, $Val extends Relay>
-    implements $RelayCopyWith<$Res> {
-  _$RelayCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of Relay
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $RelayCopyWith<Relay> get copyWith =>
+      _$RelayCopyWithImpl<Relay>(this as Relay, _$identity);
+
+  /// Serializes this Relay to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? network = null,
-    Object? gasPrice = null,
-    Object? gasLimit = null,
-    Object? transactionBody = freezed,
-    Object? walletAddress = null,
-    Object? walletModuleAddress = null,
-    Object? data = null,
-    Object? nonce = null,
-    Object? methodName = null,
-    Object? signature = null,
-    Object? walletModule = null,
-    Object? externalId = freezed,
-  }) {
-    return _then(_value.copyWith(
-      network: null == network
-          ? _value.network
-          : network // ignore: cast_nullable_to_non_nullable
-              as String,
-      gasPrice: null == gasPrice
-          ? _value.gasPrice
-          : gasPrice // ignore: cast_nullable_to_non_nullable
-              as int,
-      gasLimit: null == gasLimit
-          ? _value.gasLimit
-          : gasLimit // ignore: cast_nullable_to_non_nullable
-              as int,
-      transactionBody: freezed == transactionBody
-          ? _value.transactionBody
-          : transactionBody // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-      walletAddress: null == walletAddress
-          ? _value.walletAddress
-          : walletAddress // ignore: cast_nullable_to_non_nullable
-              as String,
-      walletModuleAddress: null == walletModuleAddress
-          ? _value.walletModuleAddress
-          : walletModuleAddress // ignore: cast_nullable_to_non_nullable
-              as String,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as String,
-      nonce: null == nonce
-          ? _value.nonce
-          : nonce // ignore: cast_nullable_to_non_nullable
-              as String,
-      methodName: null == methodName
-          ? _value.methodName
-          : methodName // ignore: cast_nullable_to_non_nullable
-              as String,
-      signature: null == signature
-          ? _value.signature
-          : signature // ignore: cast_nullable_to_non_nullable
-              as String,
-      walletModule: null == walletModule
-          ? _value.walletModule
-          : walletModule // ignore: cast_nullable_to_non_nullable
-              as String,
-      externalId: freezed == externalId
-          ? _value.externalId
-          : externalId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Relay &&
+            (identical(other.network, network) || other.network == network) &&
+            (identical(other.gasPrice, gasPrice) ||
+                other.gasPrice == gasPrice) &&
+            (identical(other.gasLimit, gasLimit) ||
+                other.gasLimit == gasLimit) &&
+            const DeepCollectionEquality()
+                .equals(other.transactionBody, transactionBody) &&
+            (identical(other.walletAddress, walletAddress) ||
+                other.walletAddress == walletAddress) &&
+            (identical(other.walletModuleAddress, walletModuleAddress) ||
+                other.walletModuleAddress == walletModuleAddress) &&
+            (identical(other.data, data) || other.data == data) &&
+            (identical(other.nonce, nonce) || other.nonce == nonce) &&
+            (identical(other.methodName, methodName) ||
+                other.methodName == methodName) &&
+            (identical(other.signature, signature) ||
+                other.signature == signature) &&
+            (identical(other.walletModule, walletModule) ||
+                other.walletModule == walletModule) &&
+            (identical(other.externalId, externalId) ||
+                other.externalId == externalId));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      network,
+      gasPrice,
+      gasLimit,
+      const DeepCollectionEquality().hash(transactionBody),
+      walletAddress,
+      walletModuleAddress,
+      data,
+      nonce,
+      methodName,
+      signature,
+      walletModule,
+      externalId);
+
+  @override
+  String toString() {
+    return 'Relay(network: $network, gasPrice: $gasPrice, gasLimit: $gasLimit, transactionBody: $transactionBody, walletAddress: $walletAddress, walletModuleAddress: $walletModuleAddress, data: $data, nonce: $nonce, methodName: $methodName, signature: $signature, walletModule: $walletModule, externalId: $externalId)';
   }
 }
 
 /// @nodoc
-abstract class _$$_RelayCopyWith<$Res> implements $RelayCopyWith<$Res> {
-  factory _$$_RelayCopyWith(_$_Relay value, $Res Function(_$_Relay) then) =
-      __$$_RelayCopyWithImpl<$Res>;
-  @override
+abstract mixin class $RelayCopyWith<$Res> {
+  factory $RelayCopyWith(Relay value, $Res Function(Relay) _then) =
+      _$RelayCopyWithImpl;
   @useResult
   $Res call(
       {String network,
@@ -160,11 +109,14 @@ abstract class _$$_RelayCopyWith<$Res> implements $RelayCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_RelayCopyWithImpl<$Res> extends _$RelayCopyWithImpl<$Res, _$_Relay>
-    implements _$$_RelayCopyWith<$Res> {
-  __$$_RelayCopyWithImpl(_$_Relay _value, $Res Function(_$_Relay) _then)
-      : super(_value, _then);
+class _$RelayCopyWithImpl<$Res> implements $RelayCopyWith<$Res> {
+  _$RelayCopyWithImpl(this._self, this._then);
 
+  final Relay _self;
+  final $Res Function(Relay) _then;
+
+  /// Create a copy of Relay
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -181,63 +133,295 @@ class __$$_RelayCopyWithImpl<$Res> extends _$RelayCopyWithImpl<$Res, _$_Relay>
     Object? walletModule = null,
     Object? externalId = freezed,
   }) {
-    return _then(_$_Relay(
+    return _then(_self.copyWith(
       network: null == network
-          ? _value.network
+          ? _self.network
           : network // ignore: cast_nullable_to_non_nullable
               as String,
       gasPrice: null == gasPrice
-          ? _value.gasPrice
+          ? _self.gasPrice
           : gasPrice // ignore: cast_nullable_to_non_nullable
               as int,
       gasLimit: null == gasLimit
-          ? _value.gasLimit
+          ? _self.gasLimit
           : gasLimit // ignore: cast_nullable_to_non_nullable
               as int,
       transactionBody: freezed == transactionBody
-          ? _value.transactionBody
+          ? _self.transactionBody
           : transactionBody // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
       walletAddress: null == walletAddress
-          ? _value.walletAddress
+          ? _self.walletAddress
           : walletAddress // ignore: cast_nullable_to_non_nullable
               as String,
       walletModuleAddress: null == walletModuleAddress
-          ? _value.walletModuleAddress
+          ? _self.walletModuleAddress
           : walletModuleAddress // ignore: cast_nullable_to_non_nullable
               as String,
       data: null == data
-          ? _value.data
+          ? _self.data
           : data // ignore: cast_nullable_to_non_nullable
               as String,
       nonce: null == nonce
-          ? _value.nonce
+          ? _self.nonce
           : nonce // ignore: cast_nullable_to_non_nullable
               as String,
       methodName: null == methodName
-          ? _value.methodName
+          ? _self.methodName
           : methodName // ignore: cast_nullable_to_non_nullable
               as String,
       signature: null == signature
-          ? _value.signature
+          ? _self.signature
           : signature // ignore: cast_nullable_to_non_nullable
               as String,
       walletModule: null == walletModule
-          ? _value.walletModule
+          ? _self.walletModule
           : walletModule // ignore: cast_nullable_to_non_nullable
               as String,
       externalId: freezed == externalId
-          ? _value.externalId
+          ? _self.externalId
           : externalId // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [Relay].
+extension RelayPatterns on Relay {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_Relay value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Relay() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_Relay value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Relay():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_Relay value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Relay() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            String network,
+            int gasPrice,
+            int gasLimit,
+            Map<String, dynamic>? transactionBody,
+            String walletAddress,
+            String walletModuleAddress,
+            String data,
+            String nonce,
+            String methodName,
+            String signature,
+            String walletModule,
+            String? externalId)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Relay() when $default != null:
+        return $default(
+            _that.network,
+            _that.gasPrice,
+            _that.gasLimit,
+            _that.transactionBody,
+            _that.walletAddress,
+            _that.walletModuleAddress,
+            _that.data,
+            _that.nonce,
+            _that.methodName,
+            _that.signature,
+            _that.walletModule,
+            _that.externalId);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            String network,
+            int gasPrice,
+            int gasLimit,
+            Map<String, dynamic>? transactionBody,
+            String walletAddress,
+            String walletModuleAddress,
+            String data,
+            String nonce,
+            String methodName,
+            String signature,
+            String walletModule,
+            String? externalId)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Relay():
+        return $default(
+            _that.network,
+            _that.gasPrice,
+            _that.gasLimit,
+            _that.transactionBody,
+            _that.walletAddress,
+            _that.walletModuleAddress,
+            _that.data,
+            _that.nonce,
+            _that.methodName,
+            _that.signature,
+            _that.walletModule,
+            _that.externalId);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            String network,
+            int gasPrice,
+            int gasLimit,
+            Map<String, dynamic>? transactionBody,
+            String walletAddress,
+            String walletModuleAddress,
+            String data,
+            String nonce,
+            String methodName,
+            String signature,
+            String walletModule,
+            String? externalId)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Relay() when $default != null:
+        return $default(
+            _that.network,
+            _that.gasPrice,
+            _that.gasLimit,
+            _that.transactionBody,
+            _that.walletAddress,
+            _that.walletModuleAddress,
+            _that.data,
+            _that.nonce,
+            _that.methodName,
+            _that.signature,
+            _that.walletModule,
+            _that.externalId);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
-class _$_Relay implements _Relay {
-  _$_Relay(
+class _Relay implements Relay {
+  _Relay(
       {this.network = 'fuse',
       this.gasPrice = 0,
       this.gasLimit = 700000,
@@ -250,9 +434,7 @@ class _$_Relay implements _Relay {
       required this.signature,
       required this.walletModule,
       this.externalId});
-
-  factory _$_Relay.fromJson(Map<String, dynamic> json) =>
-      _$$_RelayFromJson(json);
+  factory _Relay.fromJson(Map<String, dynamic> json) => _$RelayFromJson(json);
 
   @override
   @JsonKey()
@@ -283,16 +465,26 @@ class _$_Relay implements _Relay {
   @override
   final String? externalId;
 
+  /// Create a copy of Relay
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'Relay(network: $network, gasPrice: $gasPrice, gasLimit: $gasLimit, transactionBody: $transactionBody, walletAddress: $walletAddress, walletModuleAddress: $walletModuleAddress, data: $data, nonce: $nonce, methodName: $methodName, signature: $signature, walletModule: $walletModule, externalId: $externalId)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$RelayCopyWith<_Relay> get copyWith =>
+      __$RelayCopyWithImpl<_Relay>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$RelayToJson(
+      this,
+    );
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Relay &&
+            other is _Relay &&
             (identical(other.network, network) || other.network == network) &&
             (identical(other.gasPrice, gasPrice) ||
                 other.gasPrice == gasPrice) &&
@@ -316,7 +508,7 @@ class _$_Relay implements _Relay {
                 other.externalId == externalId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -333,63 +525,109 @@ class _$_Relay implements _Relay {
       walletModule,
       externalId);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$_RelayCopyWith<_$_Relay> get copyWith =>
-      __$$_RelayCopyWithImpl<_$_Relay>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_RelayToJson(
-      this,
-    );
+  String toString() {
+    return 'Relay(network: $network, gasPrice: $gasPrice, gasLimit: $gasLimit, transactionBody: $transactionBody, walletAddress: $walletAddress, walletModuleAddress: $walletModuleAddress, data: $data, nonce: $nonce, methodName: $methodName, signature: $signature, walletModule: $walletModule, externalId: $externalId)';
   }
 }
 
-abstract class _Relay implements Relay {
-  factory _Relay(
-      {final String network,
-      final int gasPrice,
-      final int gasLimit,
-      final Map<String, dynamic>? transactionBody,
-      required final String walletAddress,
-      required final String walletModuleAddress,
-      required final String data,
-      required final String nonce,
-      required final String methodName,
-      required final String signature,
-      required final String walletModule,
-      final String? externalId}) = _$_Relay;
-
-  factory _Relay.fromJson(Map<String, dynamic> json) = _$_Relay.fromJson;
-
+/// @nodoc
+abstract mixin class _$RelayCopyWith<$Res> implements $RelayCopyWith<$Res> {
+  factory _$RelayCopyWith(_Relay value, $Res Function(_Relay) _then) =
+      __$RelayCopyWithImpl;
   @override
-  String get network;
-  @override
-  int get gasPrice;
-  @override
-  int get gasLimit;
-  @override
-  Map<String, dynamic>? get transactionBody;
-  @override
-  String get walletAddress;
-  @override
-  String get walletModuleAddress;
-  @override
-  String get data;
-  @override
-  String get nonce;
-  @override
-  String get methodName;
-  @override
-  String get signature;
-  @override
-  String get walletModule;
-  @override
-  String? get externalId;
-  @override
-  @JsonKey(ignore: true)
-  _$$_RelayCopyWith<_$_Relay> get copyWith =>
-      throw _privateConstructorUsedError;
+  @useResult
+  $Res call(
+      {String network,
+      int gasPrice,
+      int gasLimit,
+      Map<String, dynamic>? transactionBody,
+      String walletAddress,
+      String walletModuleAddress,
+      String data,
+      String nonce,
+      String methodName,
+      String signature,
+      String walletModule,
+      String? externalId});
 }
+
+/// @nodoc
+class __$RelayCopyWithImpl<$Res> implements _$RelayCopyWith<$Res> {
+  __$RelayCopyWithImpl(this._self, this._then);
+
+  final _Relay _self;
+  final $Res Function(_Relay) _then;
+
+  /// Create a copy of Relay
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? network = null,
+    Object? gasPrice = null,
+    Object? gasLimit = null,
+    Object? transactionBody = freezed,
+    Object? walletAddress = null,
+    Object? walletModuleAddress = null,
+    Object? data = null,
+    Object? nonce = null,
+    Object? methodName = null,
+    Object? signature = null,
+    Object? walletModule = null,
+    Object? externalId = freezed,
+  }) {
+    return _then(_Relay(
+      network: null == network
+          ? _self.network
+          : network // ignore: cast_nullable_to_non_nullable
+              as String,
+      gasPrice: null == gasPrice
+          ? _self.gasPrice
+          : gasPrice // ignore: cast_nullable_to_non_nullable
+              as int,
+      gasLimit: null == gasLimit
+          ? _self.gasLimit
+          : gasLimit // ignore: cast_nullable_to_non_nullable
+              as int,
+      transactionBody: freezed == transactionBody
+          ? _self.transactionBody
+          : transactionBody // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+      walletAddress: null == walletAddress
+          ? _self.walletAddress
+          : walletAddress // ignore: cast_nullable_to_non_nullable
+              as String,
+      walletModuleAddress: null == walletModuleAddress
+          ? _self.walletModuleAddress
+          : walletModuleAddress // ignore: cast_nullable_to_non_nullable
+              as String,
+      data: null == data
+          ? _self.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as String,
+      nonce: null == nonce
+          ? _self.nonce
+          : nonce // ignore: cast_nullable_to_non_nullable
+              as String,
+      methodName: null == methodName
+          ? _self.methodName
+          : methodName // ignore: cast_nullable_to_non_nullable
+              as String,
+      signature: null == signature
+          ? _self.signature
+          : signature // ignore: cast_nullable_to_non_nullable
+              as String,
+      walletModule: null == walletModule
+          ? _self.walletModule
+          : walletModule // ignore: cast_nullable_to_non_nullable
+              as String,
+      externalId: freezed == externalId
+          ? _self.externalId
+          : externalId // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+// dart format on
